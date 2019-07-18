@@ -1,7 +1,7 @@
 'use strict';
-var shell = require('shelljs');
 
 module.exports = function (grunt) {
+    var shell = require('shelljs');
     require('load-grunt-tasks')(grunt);
 
     grunt.loadNpmTasks('grunt-protractor-runner');
@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         protractor: {
             options: {
                 // Location of your protractor config file
-                configFile: 'protractor.conf.js',
+                configFile: './conf.js',
 
                 // Do you want the output to use fun colors?
                 noColor: false,
@@ -32,18 +32,14 @@ module.exports = function (grunt) {
             }
         }
     });
-
-    grunt.registerTask('installSelenium', [
-        'installSelenium', function() {
-            shell.exec('npm install selenium-webdriver');
-        }
+    grunt.registerTask('installselenium', [
+        shell.exec('webdriver-manager update'),
+        shell.exec('webdriver-manager start')
     ]);
 
     grunt.registerTask('e2e', [
-        'installSelenium',
+        'installselenium',
         'protractor:e2e'
     ]);
-
-
 
 };

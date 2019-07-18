@@ -3,7 +3,7 @@ exports.config = {
     directConnect: true,
 
     specs: [
-        './../features/*.feature'
+        'features/*.feature'
     ],
 
     capabilities: {
