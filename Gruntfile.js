@@ -26,16 +26,16 @@ module.exports = function (grunt) {
             },
             e2e: {
                 options: {
-                    keepAlive: true
-                    //args: { baseUrl: 'http://localhost:8080/' }
+                    keepAlive: true,
+                    args: { baseUrl: 'http://localhost:4444/' }
                 }
             }
         }
     });
-    grunt.registerTask('installselenium', [
-        shell.exec('webdriver-manager update'),
-        shell.exec('webdriver-manager start')
-    ]);
+    grunt.task.registerTask('installselenium',
+        function(){
+            return shell.exec('node node_modules\\protractor\\bin\\webdriver-manager update')
+        });
 
     grunt.registerTask('e2e', [
         'installselenium',
