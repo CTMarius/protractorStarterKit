@@ -11,23 +11,11 @@ module.exports = function (grunt) {
             options: {
                 // Location of your protractor config file
                 configFile: './conf.js',
-
-                // Do you want the output to use fun colors?
-                noColor: false,
-
-                // Set to true if you would like to use the Protractor command line debugging tool
-                //debug: true,
-
-                // Additional arguments that are passed to the webdriver command
-                args: {
-                    includeStackTrace: true,
-                    verbose :true
-                }
             },
             e2e: {
                 options: {
                     keepAlive: true,
-                    args: { baseUrl: 'http://localhost:4444/' }
+                    args: { baseUrl:  grunt.option('baseUrl') }
                 }
             }
         }
