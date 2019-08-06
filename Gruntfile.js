@@ -8,14 +8,12 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         protractor: {
-            options: {
-                // Location of your protractor config file
-                configFile: './conf.js',
-            },
             e2e: {
                 options: {
+                    configFile: 'protractorConf.js',
                     keepAlive: true,
                     args: { baseUrl:  grunt.option('baseUrl') }
+
                 }
             }
         }

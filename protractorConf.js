@@ -1,9 +1,11 @@
+require('ts-node').register({project: 'tsconfig.json'});
 exports.config = {
 
-    directConnect: true,
+    directConnect: false,
 
     specs: [
-        'features/*.feature'
+        'features/*.feature',
+        'async_await.js'
     ],
 
     capabilities: {
@@ -11,11 +13,9 @@ exports.config = {
     },
 
     framework: 'custom',
-    frameworkPath: require.resolve('protractor-cucumber-framework'),
-
+    frameworkPath:require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        require: '../step_definitions/*.steps.js',
-        tags: '@search',
+        require: 'step_definitions/*.steps.ts',
         format: 'json:.tmp/results.json',
         strict: true
     },
