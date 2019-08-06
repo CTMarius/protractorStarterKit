@@ -1,9 +1,10 @@
-import { browser, element, by, ExpectedConditions } from 'protractor';
+import { browser, element, by, ExpectedConditions, ElementFinder, $} from 'protractor';
 
-export class AppPage {
+class AppPage {
+    public loginButton: ElementFinder;
 
-    elemOne(){
-        return element(by.id(''));
+    constructor() {
+        this.loginButton = element(by.xpath("//*[@id=\"top\"]//span/a[contains(., 'Log in'')]"));
     }
-
 }
+export = AppPage;
