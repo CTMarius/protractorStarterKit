@@ -1,5 +1,5 @@
 import {defineSupportCode} from "cucumber";
-import { browser } from 'protractor';
+import { browser } from 'protractor/built';
 import { expect } from 'chai';
 import AppPage = require('../pages/pageObjects');
 import { Given, Then, When } from "cucumber";

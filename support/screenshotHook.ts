@@ -1,5 +1,5 @@
 import {defineSupportCode, HookScenarioResult} from 'cucumber';
-import {browser} from 'protractor';
+import {browser} from 'protractor/built';
 
 defineSupportCode(function({After,Before}){
     After(async function() {
