@@ -8,7 +8,10 @@ setDefaultTimeout(60 * 1000);
 var pageObject: AppPage = new AppPage();
 
     Given(/^I navigate to the login page$/, async() => {
-        await browser.get('https://developer.db.com/').then(async() => {
-            await expect(pageObject.loginButton.isPresent()).to.be.true;
+        browser.waitForAngularEnabled(false);
+        await browser.get('https://www.netflix.com/nl-en/').then(async() => {
+            await pageObject.loginButton.isPresent().then(async(result) =>{
+                await expect(result).to.be.true;
+            })
         })
     });

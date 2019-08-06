@@ -1,7 +1,4 @@
-'use strict';
-
 const {defineSupportCode} = require('cucumber');
-const rp = require('request-promise');
 
 defineSupportCode(function({After,Before}){   
     After(function(scenario){
