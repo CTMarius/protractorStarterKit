@@ -1,6 +1,8 @@
 # ProtractorDemo
 Basic setup to easily start writing automated tests for Angular applications.
 
+Prerequisites: NodeJs
+
 Components: 
 This setup uses Protractor in combination with Cucumber for writing tests, Chai as a assertion library, Grunt as a task runner and the protractor-multiple-cucumber-html-reporter as a reporting library.
 
