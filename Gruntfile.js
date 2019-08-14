@@ -18,8 +18,12 @@ module.exports = function (grunt) {
             }
         }
     });
+    
     grunt.task.registerTask('installselenium',
         function(){
+        if (window.navigator.userAgent.indexOf("Mac") != -1){
+            return shell.exec('node node_modules/protractor/bin/webdriver-manager update')
+        } else if(window.navigator.userAgent.indexOf("Windows")!= -1)
             return shell.exec('node node_modules\\protractor\\bin\\webdriver-manager update')
         });
 
