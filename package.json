@@ -36,7 +36,7 @@
     "log4js": "^3.0.0",
     "log4js-protractor-appender": "^1.1.2",
     "nconf": "^0.10.0",
-    "snyk": "^1.210.0"
+    "snyk": "^1.230.5"
   },
   "snyk": true
 }
