@@ -9,8 +9,12 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 Getting started:
 
-Install NodeJS. Clone or download the repository. In the root folder run "npm install" and "npm install -g grunt-cli". Run grunt e2e in the cli in order to run the tests. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
+Install NodeJS. Clone or download the repository. In the root folder run "npm install" and "npm install -g grunt-cli". Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt runner. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
 Writing tests:
 
-Scenarios in the feature files. Step definitions in the step definition files. Page objects in the page objects files. Structure may vary based on the project, number of pages, number of scenarios etc.
+- Scenarios in the feature files. 
+- Step definitions in the step definition files. 
+- Page objects in the page objects files. 
+
+Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
