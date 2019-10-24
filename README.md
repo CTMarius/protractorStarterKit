@@ -18,3 +18,6 @@ Writing tests:
 - Page objects in the page objects files. 
 
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
+
+
+TODO: configure variables for baseUrl and login credentials that can be passed via the command line.
