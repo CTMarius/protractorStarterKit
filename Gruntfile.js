@@ -2,7 +2,7 @@
 
 module.exports = function (grunt) {
     var shell = require('shelljs');
-    var os = require('os');
+	var os = require('os');
     require('load-grunt-tasks')(grunt);
 
     grunt.loadNpmTasks('grunt-protractor-runner');
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             }
         }
     });
-    
+
     grunt.task.registerTask('installselenium',
       function(){
 		  if (os.platform().indexOf("Mac") != -1){
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             return shell.exec('node node_modules\\grunt-protractor-runner\\node_modules\\protractor\\bin\\webdriver-manager update')
 		}
 	 })
-
+    
     grunt.registerTask('e2e', [
         'installselenium',
         'protractor:e2e'
