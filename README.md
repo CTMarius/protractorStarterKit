@@ -9,7 +9,7 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 Getting started:
 
-Install NodeJS. 
+- Install NodeJS. 
 - Clone or download the repository. 
 - In the root folder run "npm install" and "npm install -g grunt-cli". 
 - Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt runner. 
