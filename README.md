@@ -1,5 +1,5 @@
 # Protractor Demo
-Basic setup to easily start writing automated tests for Angular applications.
+Basic setup to easily start writing automated UI tests for Angular applications.
 
 Prerequisites: NodeJs, Webstorm or any other IDE
 
