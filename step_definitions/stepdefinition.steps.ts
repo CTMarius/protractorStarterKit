@@ -30,5 +30,5 @@ setDefaultTimeout(60 * 1000);
 
     When(/^I click on the sign in button$/, async() => {
         browser.waitForAngularEnabled(false); 
-        await pageObject.loginButton.click();
+        return pageObject.loginButton.click();
     });
