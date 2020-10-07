@@ -1,4 +1,4 @@
-//import {defineSupportCode} from "cucumber";
+import {defineSupportCode} from "cucumber";
 import { browser } from 'protractor/built';
 import { expect } from 'chai';
 import { assert } from 'chai';
