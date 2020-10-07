@@ -9,11 +9,12 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 Getting started:
 
-- Install NodeJS. 
-- Clone or download the repository. 
-- In the root folder of the project, open a command prompt and run "npm install". Once finished, run "npm install -g grunt-cli". 
-- Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt runner. 
-- Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
+1. Install NodeJS. 
+2. Clone or download the repository. 
+3. In the root folder of the project, open a command prompt and run "npm install". 
+4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt. 
+5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm. 
+6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
 Writing tests:
 
@@ -22,10 +23,3 @@ Writing tests:
 - Page objects in the page objects files. 
 
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
-
-
-TODO: configure variables for baseUrl and login credentials that can be passed via the command line.
-----------------------------
-
-
-
