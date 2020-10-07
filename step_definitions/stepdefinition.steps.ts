@@ -5,8 +5,9 @@ import { assert } from 'chai';
 import { Given, Then, When } from "cucumber";
 import AppPage = require('../pages/pageObjects');
 
-var {setDefaultTimeout} = require('cucumber');
 var pageObject: AppPage = new AppPage();
+var {setDefaultTimeout} = require('cucumber');
+
 setDefaultTimeout(60 * 1000);
 browser.waitForAngularEnabled(false);
 
