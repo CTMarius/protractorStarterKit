@@ -48,4 +48,5 @@ Grunt: https://gruntjs.com/
 
 TypeScript: https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
 
+Selenium: https://www.selenium.dev/
 
