@@ -34,10 +34,18 @@ Protractor API: https://www.protractortest.org/#/api
 
 Chai: API: https://www.chaijs.com/api/
 
-Grunt: https://gruntjs.com/
-
-TypeScript: https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
+Cucumber: https://cucumber.io/docs/gherkin/reference/
 
 Async/Await explained: https://levelup.gitconnected.com/understand-async-await-in-typescript-in-only-a-few-minutes-dedb5a18a2c
 
 This keyword explained: https://www.youtube.com/watch?v=Pi3QC_fVaD0
+
+Xpath cheatsheet: https://devhints.io/xpath
+
+Arrow functions: https://www.youtube.com/watch?v=4N-L3Mmzu0Y
+
+Grunt: https://gruntjs.com/
+
+TypeScript: https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
+
+
