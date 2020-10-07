@@ -1,8 +1,10 @@
-import {defineSupportCode} from "cucumber";
+//import {defineSupportCode} from "cucumber";
 import { browser } from 'protractor/built';
 import { expect } from 'chai';
-import AppPage = require('../pages/pageObjects');
+import { assert } from 'chai';
 import { Given, Then, When } from "cucumber";
+import AppPage = require('../pages/pageObjects');
+
 var {setDefaultTimeout} = require('cucumber');
 var pageObject: AppPage = new AppPage();
 setDefaultTimeout(60 * 1000);
