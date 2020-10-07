@@ -10,6 +10,9 @@ setDefaultTimeout(60 * 1000);
     Given(/^I navigate to the main page$/, async() => {
         browser.waitForAngularEnabled(false);
         await browser.get('https://www.netflix.com').then(async() => {
+            if(pageObject.loginButton.isPresent()){
+                pageObject.loginButton.click();
+            }
             await pageObject.loginButton.isPresent().then(async(result) =>{
                 await expect(result).to.be.true;
             })
