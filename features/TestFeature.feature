@@ -6,4 +6,4 @@ Feature: Test feature
     And I type <email> in the email field
   Examples:
   |email|
-  |testemail@grr.la|
+  |"testemail@grr.la"|
