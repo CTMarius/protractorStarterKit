@@ -13,7 +13,7 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 ### Getting started:
 
-1. Install NodeJS. 
+1. Install NodeJS (and perhaps reboot your system)
 2. Clone or download the repository. 
 3. In the root folder of the project, open a command prompt and run "npm install". (If you are using Webstorm, open a terminal window in Webstorm after cloning and opening the project and use that one instead of the cmd).
 4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt. 
