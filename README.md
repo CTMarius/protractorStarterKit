@@ -11,7 +11,7 @@ Basic setup to easily start writing automated UI tests for Angular applications.
 
 1. Install NodeJS. 
 2. Clone or download the repository. 
-3. In the root folder of the project, open a command prompt and run "npm install". 
+3. In the root folder of the project, open a command prompt and run "npm install". (If you are using Webstorm, open a terminal window in Webstorm after cloning and opening the project).
 4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt. 
 5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm. 
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
