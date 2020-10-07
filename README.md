@@ -11,7 +11,7 @@ Getting started:
 
 - Install NodeJS. 
 - Clone or download the repository. 
-- In the root folder run "npm install" and "npm install -g grunt-cli". 
+- In the root folder of the project, open a command prompt and run "npm install". Once finished, run "npm install -g grunt-cli". 
 - Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt runner. 
 - Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
