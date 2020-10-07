@@ -16,14 +16,14 @@ browser.waitForAngularEnabled(false);
                 pageObject.acceptCookies.click();
             }
             await pageObject.loginButton.isPresent().then(async(result) =>{
-                await expect(result).to.be.true;
+                return expect(result).to.be.true;
             })
         })
     });
 
     When(/^I type "(.*?)" in the email field$/, async(email) => {             
             await pageObject.emailField.isPresent().then(async(result) =>{
-                return pageObject.emailField.sendKeys(email);
+                await pageObject.emailField.sendKeys(email);
             })        
     });
 
