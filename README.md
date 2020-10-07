@@ -1,6 +1,10 @@
 # Protractor Demo
 Basic setup to easily start writing automated UI tests for Angular applications.
 
+### Components:
+
+This setup uses Protractor in combination with Cucumber, Chai as a assertion library, Grunt as a task runner and the protractor-multiple-cucumber-html-reporter as a reporting library.
+
 ### Prerequisites: 
 
 1. NodeJs: https://nodejs.org/en/download/
@@ -15,10 +19,6 @@ Basic setup to easily start writing automated UI tests for Angular applications.
 4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt. 
 5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm. 
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
-
-### Components:
-
-This setup uses Protractor in combination with Cucumber, Chai as a assertion library, Grunt as a task runner and the protractor-multiple-cucumber-html-reporter as a reporting library.
 
 ### Writing tests:
 
@@ -37,3 +37,7 @@ Chai: API: https://www.chaijs.com/api/
 Grunt: https://gruntjs.com/
 
 TypeScript: https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
+
+Async/Await explained: https://levelup.gitconnected.com/understand-async-await-in-typescript-in-only-a-few-minutes-dedb5a18a2c
+
+This keyword explained: https://www.youtube.com/watch?v=Pi3QC_fVaD0
