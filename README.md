@@ -32,7 +32,7 @@ Structure may vary based on the project, number of pages, number of scenarios et
 
 Protractor API: https://www.protractortest.org/#/api
 
-Chai: API: https://www.chaijs.com/api/
+Chai API: https://www.chaijs.com/api/
 
 Cucumber: https://cucumber.io/docs/gherkin/reference/
 
