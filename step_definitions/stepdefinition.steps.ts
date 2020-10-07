@@ -8,9 +8,9 @@ import AppPage = require('../pages/pageObjects');
 var {setDefaultTimeout} = require('cucumber');
 var pageObject: AppPage = new AppPage();
 setDefaultTimeout(60 * 1000);
+browser.waitForAngularEnabled(false);
 
-    Given(/^I navigate to the main page$/, async() => {
-        browser.waitForAngularEnabled(false);
+    Given(/^I navigate to the main page$/, async() => {        
         await browser.get('https://www.netflix.com').then(async() => {
             if(pageObject.acceptCookies.isPresent()){
                 pageObject.acceptCookies.click();
@@ -21,14 +21,12 @@ setDefaultTimeout(60 * 1000);
         })
     });
 
-    When(/^I type "(.*?)" in the email field$/, async(email) => {
-        browser.waitForAngularEnabled(false);       
+    When(/^I type "(.*?)" in the email field$/, async(email) => {             
             await pageObject.emailField.isPresent().then(async(result) =>{
                 return pageObject.emailField.sendKeys(email);
             })        
     });
 
-    When(/^I click on the sign in button$/, async() => {
-        browser.waitForAngularEnabled(false); 
+    When(/^I click on the sign in button$/, async() => {        
         return pageObject.loginButton.click();
     });
