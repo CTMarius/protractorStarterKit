@@ -23,9 +23,9 @@ browser.waitForAngularEnabled(false);
     });
 
     When(/^I type "(.*?)" in the email field$/, async(email) => {             
-            await pageObject.emailField.isPresent().then(async(result) =>{
-                await pageObject.emailField.sendKeys(email);
-            })        
+       await pageObject.emailField.isPresent().then(async(result) =>{
+          await pageObject.emailField.sendKeys(email);
+        })        
     });
 
     When(/^I click on the sign in button$/, async() => {        
