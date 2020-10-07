@@ -7,7 +7,7 @@ var {setDefaultTimeout} = require('cucumber');
 var pageObject: AppPage = new AppPage();
 setDefaultTimeout(60 * 1000);
 
-    Given(/^I navigate to the login page$/, async() => {
+    Given(/^I navigate to the main page$/, async() => {
         browser.waitForAngularEnabled(false);
         await browser.get('https://www.netflix.com/nl-en/login').then(async() => {
             await pageObject.loginButton.isPresent().then(async(result) =>{
@@ -21,4 +21,9 @@ setDefaultTimeout(60 * 1000);
             await pageObject.emailField.isPresent().then(async(result) =>{
                 return pageObject.emailField.sendKeys(email);
             })        
+    });
+
+    When(/^I click on the sign in button$/, async() => {
+        browser.waitForAngularEnabled(false); 
+        await pageObject.loginButton.click();
     });
