@@ -8,7 +8,7 @@ class AppPage {
     constructor() {
         this.loginButton = element(by.xpath("//div/a[contains(., 'Sign In')]"));
         this.emailField = element(by.id("id_userLoginId"));
-        this.acceptCookies = element(by.classname("btn-red"));
+        this.acceptCookies = element(by.className("btn-red"));
         
     }
 }
