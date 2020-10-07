@@ -23,9 +23,9 @@ module.exports = function (grunt) {
     grunt.task.registerTask('installselenium',
       function(){
 		  if (os.platform().indexOf("Mac") != -1){
-            return shell.exec('node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager upgrade')
+            return shell.exec('node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update')
         } else {
-            return shell.exec('node node_modules\\grunt-protractor-runner\\node_modules\\protractor\\bin\\webdriver-manager upgrade')
+            return shell.exec('node node_modules\\grunt-protractor-runner\\node_modules\\protractor\\bin\\webdriver-manager update')
 		}
 	 })
     
