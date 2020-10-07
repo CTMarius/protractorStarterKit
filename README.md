@@ -1,5 +1,5 @@
 # Protractor Demo
-Basic setup to easily start writing automated UI tests for Angular applications.
+Basic setup to easily start writing automated UI tests for web applications.
 
 ### Components:
 
