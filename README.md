@@ -22,7 +22,7 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 ### Writing tests:
 
-- Scenarios go in the feature files. 
+- Scenarios in the feature files. 
 - Step definitions in the step definition files. 
 - Page objects in the page objects files. 
 
