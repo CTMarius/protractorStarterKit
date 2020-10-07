@@ -9,9 +9,16 @@ setDefaultTimeout(60 * 1000);
 
     Given(/^I navigate to the login page$/, async() => {
         browser.waitForAngularEnabled(false);
-        await browser.get('https://www.netflix.com/nl-en/').then(async() => {
+        await browser.get('https://www.netflix.com/nl-en/login').then(async() => {
             await pageObject.loginButton.isPresent().then(async(result) =>{
                 await expect(result).to.be.true;
             })
         })
+    });
+
+    When(/^I type "(.*?)" in the email field$/, async(email) => {
+        browser.waitForAngularEnabled(false);       
+            await pageObject.emailField.isPresent().then(async(result) =>{
+                return pageObject.emailField.sendKeys(email);
+            })        
     });
