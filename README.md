@@ -1,13 +1,13 @@
 # Protractor Demo
 Basic setup to easily start writing automated UI tests for Angular applications.
 
-## Prerequisites: 
+### Prerequisites: 
 
 1. NodeJs: https://nodejs.org/en/download/
 
 2. Webstorm or any other IDE: https://www.jetbrains.com/webstorm/download/#section=windows
 
-## Getting started:
+### Getting started:
 
 1. Install NodeJS. 
 2. Clone or download the repository. 
@@ -16,11 +16,11 @@ Basic setup to easily start writing automated UI tests for Angular applications.
 5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm. 
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
-## Components:
+### Components:
 
 This setup uses Protractor in combination with Cucumber, Chai as a assertion library, Grunt as a task runner and the protractor-multiple-cucumber-html-reporter as a reporting library.
 
-## Writing tests:
+### Writing tests:
 
 - Scenarios go in the feature files. 
 - Step definitions in the step definition files. 
@@ -28,7 +28,7 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
 
-## Documentation:
+### Documentation:
 
 Protractor API: https://www.protractortest.org/#/api
 
