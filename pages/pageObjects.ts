@@ -3,7 +3,7 @@ import { browser, element, by, ExpectedConditions, ElementFinder, $} from 'protr
 class AppPage {
     public loginButton: ElementFinder;
     public emailField: ElementFinder;
-    public acceptCookies : ElementFinder;
+    public acceptCookies: ElementFinder;
 
     constructor() {
         this.loginButton = element(by.xpath("//div/a[contains(., 'Sign In')]"));
