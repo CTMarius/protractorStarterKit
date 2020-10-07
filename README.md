@@ -25,3 +25,7 @@ Structure may vary based on the project, number of pages, number of scenarios et
 
 
 TODO: configure variables for baseUrl and login credentials that can be passed via the command line.
+----------------------------
+
+
+
