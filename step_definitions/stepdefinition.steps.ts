@@ -31,3 +31,9 @@ browser.waitForAngularEnabled(false);
     When(/^I click on the sign in button$/, async() => {        
         return loginPage.loginButton.click();
     });
+
+//TODO: Add step definitions for typing in a password, clicking on the submit link and checking if the user is logged in correctly. Use the Then keyword when making an assertion.
+
+
+
+
