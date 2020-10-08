@@ -1,6 +1,6 @@
 import { browser, element, by, ExpectedConditions, ElementFinder, $} from 'protractor';
 
-class AppPage {
+class LoginPage {
     public loginButton: ElementFinder;
     public emailField: ElementFinder;
     public acceptCookies: ElementFinder;
@@ -12,4 +12,4 @@ class AppPage {
         
     }
 }
-export = AppPage;
+export = LoginPage;
