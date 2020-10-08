@@ -38,6 +38,8 @@ Cucumber: https://cucumber.io/docs/gherkin/reference/
 
 Xpath cheatsheet: https://devhints.io/xpath
 
+Classes, properties, constructors explained: https://www.typescriptlang.org/docs/handbook/classes.html
+
 Async/Await explained: https://levelup.gitconnected.com/understand-async-await-in-typescript-in-only-a-few-minutes-dedb5a18a2c
 
 This keyword explained: https://www.youtube.com/watch?v=Pi3QC_fVaD0
