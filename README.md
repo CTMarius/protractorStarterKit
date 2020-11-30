@@ -9,7 +9,7 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 1. NodeJs: https://nodejs.org/en/download/
 
-2. Webstorm or any other IDE: https://www.jetbrains.com/webstorm/download/#section=windows
+2. Webstorm or any other IDE: https://www.jetbrains.com/webstorm/download/
 
 ### Getting started:
 
