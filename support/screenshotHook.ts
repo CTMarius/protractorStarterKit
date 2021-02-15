@@ -7,5 +7,4 @@ defineSupportCode(function({After,Before}){
             const screenShot = await browser.takeScreenshot();
             this.attach(screenShot, "image/png");
     });
-
 });
