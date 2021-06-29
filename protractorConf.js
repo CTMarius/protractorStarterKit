@@ -9,7 +9,8 @@ exports.config = {
     ],
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+       //browserName: 'firefox'
     },
 
     framework: 'custom',
