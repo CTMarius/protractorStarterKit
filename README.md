@@ -28,7 +28,8 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 
 ### Configuring the tests:
 
-Configurations are available in the protractorConf.js and Gruntfile.js. You can decide how to configure your tests, either using tags, or creating different grunt tasks to run different tests. You can choose to run on firefox or chrome based on the protractorConf.js file. 
+Configurations are available in the protractorConf.js and Gruntfile.js. You can decide how to configure your tests, either using tags, or creating different grunt tasks to run different tests. You can choose to run on firefox or chrome based on the protractorConf.js file.
+
 One way of configuring it is by creating different protractorConf.js for each browser and then configuring separate tasks in the Gruntfile.js that make use of the two protractor config files. You can then call those grunt tasks from the command line in your pipeline. Should work the same way in TeamCity, Azure etc.
 
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
