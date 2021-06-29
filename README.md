@@ -35,7 +35,7 @@ One way of configuring it is by creating different protractorConf.js for each br
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
 
 ### TODO:
-- turn baseUrl, username and password into command line parameters.
+- turn username and password into command line parameters.
 - setup more example configurations.
 - add a helper functions layer to enable users to write cleaner step definitions.
 - add functions for the following utilities: pdf, xml, json, xls reading and comparisson.
