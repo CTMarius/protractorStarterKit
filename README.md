@@ -34,6 +34,11 @@ Structure may vary based on the project, number of pages, number of scenarios et
 
 ### TODO:
 - turn baseUrl, username and password into command line parameters.
+- setup more example configuration.
+- add a helper functions layer to enable users to write cleaner step definitions.
+- investigate mobile integration.
+- add multi browser support.
+- expand the testing base.
 
 ### Documentation:
 
@@ -58,4 +63,3 @@ Grunt: https://gruntjs.com/
 TypeScript: https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
 
 Selenium: https://www.selenium.dev/
-
