@@ -36,10 +36,12 @@ Structure may vary based on the project, number of pages, number of scenarios et
 
 ### TODO:
 - turn baseUrl, username and password into command line parameters.
-- setup more example configuration.
+- setup more example configurations.
 - add a helper functions layer to enable users to write cleaner step definitions.
-- investigate mobile integration.
+- add functions for the following utilities: pdf, xml, json, xls reading and comparisson.
 - add multi browser support.
+- log performance metrics.
+- investigate mobile integration.
 - expand the testing examples.
 
 ### Documentation:
