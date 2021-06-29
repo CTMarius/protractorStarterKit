@@ -38,7 +38,7 @@ Structure may vary based on the project, number of pages, number of scenarios et
 - add a helper functions layer to enable users to write cleaner step definitions.
 - investigate mobile integration.
 - add multi browser support.
-- expand the testing base.
+- expand the testing examples.
 
 ### Documentation:
 
