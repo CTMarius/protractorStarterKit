@@ -1,10 +1,8 @@
 
 import { browser, element, by, ExpectedConditions, ElementFinder, $} from 'protractor';
 
-class FinalizeOnboardingPage {
-    
-    //TODO: define here the elements required to perform actions in the finalize account page. Use LoginPage as example.
-    
+class FinalizeOnboardingPage {    
+       
     public elementName: ElementFinder;
     
     constructor() {
