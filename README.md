@@ -37,11 +37,11 @@ Structure may vary based on the project, number of pages, number of scenarios et
 ### TODO:
 - turn username and password into command line parameters.
 - setup more example configurations.
-- add a helper functions layer to enable users to write cleaner step definitions.
+- add a helper functions or utils layer and page actions to enable users to write cleaner step definitions.
 - add functions for the following utilities: pdf, xml, json, xls reading and comparisson.
 - add multi browser support.
 - log performance metrics.
-- investigate mobile integration.
+- add mobile integration.
 - expand the testing examples.
 
 ### Documentation:
