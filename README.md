@@ -40,6 +40,7 @@ Structure may vary based on the project, number of pages, number of scenarios et
 - add a helper functions or utils layer and page actions to enable users to write cleaner step definitions.
 - add functions for the following utilities: pdf, xml, json, xls reading and comparisson.
 - add multi browser support.
+- add api testing support
 - log performance metrics.
 - add mobile integration.
 - expand the testing examples.
