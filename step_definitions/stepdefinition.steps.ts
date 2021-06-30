@@ -32,8 +32,5 @@ browser.waitForAngularEnabled(false);
         return loginPage.loginButton.click();
     });
 
-//TODO: Add step definitions for typing in a password, clicking on the submit link and checking if the user is logged in correctly. Try to also use of the Then keyword.
-
-
 
 
