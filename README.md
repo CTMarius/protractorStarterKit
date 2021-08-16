@@ -25,7 +25,6 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 - Scenarios in the feature files. 
 - Step definitions in the step definition files. 
 - Page objects in the page objects files. 
-- Configure new test tasks in the Grunt.js file.
 
 ### Configuring the tests:
 
