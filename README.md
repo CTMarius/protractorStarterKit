@@ -35,7 +35,6 @@ One way of configuring it is by creating different protractorConf.js for each br
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
 
 ### TODO:
-- refactor selenium installation in the grunt files
 - turn username and password into command line parameters.
 - setup more example configurations.
 - add a helper functions or utils layer and page actions to enable users to write cleaner step definitions.
