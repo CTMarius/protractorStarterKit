@@ -2,8 +2,7 @@ import {defineSupportCode, HookScenarioResult} from 'cucumber';
 import {browser} from 'protractor/built';
 
 defineSupportCode(function({After,Before}){
-    After(async function() {
-            // screenShot is a base-64 encoded PNG
+    After(async function() {           
             const screenShot = await browser.takeScreenshot();
             this.attach(screenShot, "image/png");
     });
