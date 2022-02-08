@@ -43,6 +43,7 @@ Structure may vary based on the project, number of pages, number of scenarios et
 - add api testing support
 - log performance metrics.
 - add mobile integration.
+- test integration with Galen framework
 - expand the testing examples.
 
 ### Documentation:
