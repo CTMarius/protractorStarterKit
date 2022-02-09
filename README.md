@@ -1,4 +1,4 @@
-# Protractor Demo
+# Protractor Starter Kit
 Basic setup to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
 
 ### Components:
