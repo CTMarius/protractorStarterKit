@@ -14,7 +14,6 @@ module.exports = function (grunt) {
                     configFile: 'protractorConf.js',
                     keepAlive: true,
                     args: { baseUrl:  grunt.option('baseUrl') }
-
                 }
             }
         }

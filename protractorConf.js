@@ -1,3 +1,4 @@
+const {browser} = require("protractor");
 require('ts-node').register({project: 'tsconfig.json'});
 exports.config = {
 
@@ -10,22 +11,22 @@ exports.config = {
 
     capabilities: {
         browserName: 'chrome',
-       //browserName: 'firefox'
+        //browserName: 'firefox'
     },
 
     framework: 'custom',
     frameworkPath:require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        require: ['step_definitions/*.steps.ts', "support/*.ts"],
+        require: ['stepDefinitions/*.steps.ts', "support/*.ts"],
         format: 'json:.tmp/results.json',
         strict: true
     },
 
     plugins: [{
         package: 'protractor-multiple-cucumber-html-reporter-plugin',
-        options:{
+        options: {
             automaticallyGenerateReport: true,
             removeExistingJsonReportFile: true
         }
-    }]
+    }],
 };
