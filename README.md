@@ -11,7 +11,7 @@ Protractor is an end-to-end test framework for Angular and AngularJS application
 non-angular applications by simply disabling the wait for angular. When used for Angular applications, protractor will
 automatically wait until the page is fully loaded and will automatically execute the next step once all pending tasks
 are done. Obviously this advantage is lost when using it to test non-angular applications, and you will have to revert
-to using old fashion browser-waits.
+to using old-fashioned browser-waits.
 
 ### Prerequisites:
 
