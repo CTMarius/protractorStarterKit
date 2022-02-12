@@ -27,9 +27,7 @@ class mainPageElements {
         this.addToBagButton = element(by.xpath("//button[@data-auto-id='add-to-bag']"));
         this.addedToBagModal = element(by.xpath("//div[@data-auto-id='added-to-bag-modal']"));
         this.viewBagButton = element(by.xpath("//a[@data-auto-id='view-bag-desktop']"));
-        this.checkoutBottomButton = element(by.xpath("//a[@data-auto-id='glass-checkout-button-bottom']"));
-
-
+        this.checkoutBottomButton = element(by.xpath("//*[@data-auto-id='glass-checkout-button-bottom']"));
     }
 }
 
