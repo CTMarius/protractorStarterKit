@@ -40,5 +40,34 @@ When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, 
     });
 });
 
+When(/^I select the size '(.*)' and add the product '(.*)' to my bag$/, async (size, product) => {
+    await mainPage.sizeSelectionArea.isPresent().then(async () => {
+        await mainPage.sizeSelectionArea.element(by.xpath("//button/span[text() = " + size + "]")).click();
+        await mainPage.addToBagButton.click();
+        await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.addedToBagModal), 10000).then(async () => {
+            await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal, product);
+            await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal.element(by.xpath("//div[@class[contains(.,'order-summary')]]")), "1")
+        });
+    });
+});
+
+When(/^I click on the View Bag button and navigate to the chart$/, async () => {
+    await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.viewBagButton), 10000).then(async () => {
+        await mainPage.viewBagButton.click();
+        await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart'));
+    });
+
+
+    When(/^In the chart page I proceed to checkout$/, async () => {
+        await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart')).then(async () => {
+            await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.checkoutBottomButton), 10000).then(async () => {
+                await mainPage.checkoutBottomButton.click();
+                await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'delivery'));
+            });
+        });
+    });
+
+
+});
 
 

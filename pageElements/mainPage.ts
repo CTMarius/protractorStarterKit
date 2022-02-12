@@ -11,6 +11,11 @@ class mainPage {
     public productSuggestion: ElementFinder;
     public searchResultsContainer: ElementFinder;
     public signUpdiscountModal: ElementFinder;
+    public sizeSelectionArea: ElementFinder;
+    public addToBagButton: ElementFinder;
+    public addedToBagModal: ElementFinder;
+    public viewBagButton: ElementFinder;
+    public checkoutBottomButton: ElementFinder;
 
     constructor() {
         this.searchField = element(by.xpath("//input[@data-auto-id = 'searchinput']"));
@@ -22,6 +27,11 @@ class mainPage {
         this.productSuggestion = element(by.xpath("//li[@class[contains(.,'product')]]//a[@class[contains(.,'suggestion')]]"));
         this.searchResultsContainer = element(by.xpath("//div[@data-auto-id='glass-search-results-container']"));
         this.signUpdiscountModal = element(by.xpath("//div[@role='dialog' and contains(.,'Sign up')]//button[@class[contains(.,'close')]]"));
+        this.sizeSelectionArea = element(by.xpath("//div[@class[contains(.,'size-selector')]]"));
+        this.addToBagButton = element(by.xpath("//button[@data-auto-id='add-to-bag']"));
+        this.addedToBagModal = element(by.xpath("//div[@data-auto-id='added-to-bag-modal']"));
+        this.viewBagButton = element(by.xpath("//a[@data-auto-id='view-bag-desktop']"));
+        this.checkoutBottomButton = element(by.xpath("//a[@data-auto-id='glass-checkout-button-bottom']"));
 
 
     }
