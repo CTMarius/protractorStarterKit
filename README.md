@@ -4,8 +4,14 @@ Basic setup to easily start writing automated UI tests for web applications and 
 
 ### Components:
 
-This setup uses Protractor in combination with Cucumber, Chai as a assertion library, Grunt as a task runner and the
+This setup uses Protractor in combination with Cucumber, Chai as an assertion library, Grunt as a task runner and the
 protractor-multiple-cucumber-html-reporter as a reporting library.
+
+Protractor is an end-to-end test framework for Angular and AngularJS applications, but it can also be used for
+non-angular applications by simply disabling the wait for angular. When used for Angular applications, protractor will
+automatically wait until the page is fully loaded and will automatically execute the next step once all pending tasks
+are done. Obviously this advantage is lost when using it to test non-angular applications, and you will have to revert
+to using old fashion browser-waits.
 
 ### Prerequisites:
 
