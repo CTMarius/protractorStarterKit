@@ -1,6 +1,6 @@
 import {Given, When} from "cucumber";
 import {browser} from 'protractor/built';
-import {ExpectedConditions} from "protractor";
+import {by, ExpectedConditions} from "protractor";
 import MainPage = require('../pageElements/mainPage');
 
 let mainPage: MainPage = new MainPage();
@@ -25,16 +25,19 @@ Given(/^I navigate to the main page and I choose my region '(.*)'$/, async (regi
     })
 });
 
-When(/^I search for the '(.*)' activity and select the first product$/, async (keyword) => {
+When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
     await mainPage.searchField.isPresent().then(async () => {
         await mainPage.searchField.click();
         await mainPage.searchField.sendKeys(keyword);
         await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.searchResultsContainer), 10000).then(async () => {
-            await mainPage.productSuggestion.click();
-            await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + "ultraboost-4.0-dna-shoes/FY9121.html"), 30000);
-        })
-    })
-
+            await browser.executeScript("arguments[0].click();", mainPage.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
+            await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + productName.toLowerCase().replace(" ", "-")), 30000).then(async () => {
+                if (browser.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
+                    await mainPage.signUpdiscountModal.click();
+                }
+            });
+        });
+    });
 });
 
 

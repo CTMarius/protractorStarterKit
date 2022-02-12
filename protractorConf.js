@@ -11,7 +11,11 @@ exports.config = {
 
     capabilities: {
         browserName: 'chrome',
-        //browserName: 'firefox'
+        chromeOptions: {
+            args: [
+                'start-maximized'
+            ]
+        }
     },
 
     framework: 'custom',
