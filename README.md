@@ -17,8 +17,9 @@ protractor-multiple-cucumber-html-reporter as a reporting library.
 
 1. Install NodeJS (and perhaps reboot your system)
 2. Clone or download this repository.
-3. In the root folder of the project, open an command prompt with admin rights and run "npm install".
-4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt.
+3. In the root folder of the project, open a command prompt with admin rights and run "npm install".
+4. Once step 2 is finished, run "npm install grunt-cli -g" in the command prompt. You might need to restart your
+   terminal after this is finished.
 5. Run "grunt e2e --baseUrl=<url>" in the command line in order to run the tests or use the integrated grunt task runner
    in Webstorm.
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
@@ -44,13 +45,13 @@ order to find out how to write smarter scenarios: https://cucumber.io/docs/gherk
 
 ### TODO:
 
-- turn username and password into command line parameters.
+- create username and password grunt options.
 - setup more example configurations.
 - add a helper functions or utils layer and page actions to enable users to write cleaner step definitions.
-- add functions for the following utilities: pdf, xml, json, xls reading and comparisson.
+- add functions for the following utilities: pdf, xml, json, xls reading and comparison.
 - add multi browser support.
-- add api testing support
-- log performance metrics.
+- add api testing support.
+- configure reports to display duration.
 - add mobile integration.
 - expand the testing examples. -> Done
 
