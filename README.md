@@ -2,7 +2,7 @@
 
 This setup uses Protractor in combination with Cucumber, Chai as a assertion library, Grunt as a task runner and the protractor-multiple-cucumber-html-reporter as a reporting library.
 
-### Prerequisites: 
+### Prerequisites:
 
 1. NodeJs: https://nodejs.org/en/download/
 
@@ -11,17 +11,17 @@ This setup uses Protractor in combination with Cucumber, Chai as a assertion lib
 ### Getting started:
 
 1. Install NodeJS (and perhaps reboot your system)
-2. Clone or download this repository. 
-3. In the root folder of the project, open an command prompt with admin rights and run "npm install". 
-4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt. 
-5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm. 
+2. Clone or download this repository.
+3. In the root folder of the project, open an command prompt with admin rights and run "npm install".
+4. Once step 2 is finished, run "npm install -g grunt-cli" in the command prompt.
+5. Run "grunt e2e" in the command line in order to run the tests or use the integrated grunt task runner in Webstorm.
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
 ### Writing tests:
 
-- Scenarios in the feature files. 
-- Step definitions in the step definition files. 
-- Page objects in the page objects files. 
+- Scenarios in the feature files.
+- Step definitions in the step definition files.
+- Page objects in the page objects files.
 
 ### Configuring the tests:
 
