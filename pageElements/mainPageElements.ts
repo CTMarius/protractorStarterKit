@@ -1,6 +1,6 @@
 import {by, element, ElementFinder} from 'protractor';
 
-class mainPage {
+class mainPageElements {
 
     public searchField: ElementFinder;
     public countryModal: ElementFinder;
@@ -8,8 +8,6 @@ class mainPage {
     public countryOptionNL: ElementFinder;
     public goButton: ElementFinder;
     public acceptTrackingButton: ElementFinder;
-    public productSuggestion: ElementFinder;
-    public searchResultsContainer: ElementFinder;
     public signUpdiscountModal: ElementFinder;
     public sizeSelectionArea: ElementFinder;
     public addToBagButton: ElementFinder;
@@ -24,8 +22,6 @@ class mainPage {
         this.countryOptionNL = element(by.xpath("//label[@class[contains(.,'gl-radio-input')]]//span[text()='Netherlands']"));
         this.goButton = element(by.xpath("//button[@data-auto-id='choose-delivery-country']"));
         this.acceptTrackingButton = element(by.xpath("//button[@data-auto-id='glass-gdpr-default-consent-accept-button']"));
-        this.productSuggestion = element(by.xpath("//li[@class[contains(.,'product')]]//a[@class[contains(.,'suggestion')]]"));
-        this.searchResultsContainer = element(by.xpath("//div[@data-auto-id='glass-search-results-container']"));
         this.signUpdiscountModal = element(by.xpath("//div[@role='dialog' and contains(.,'Sign up')]//button[@class[contains(.,'close')]]"));
         this.sizeSelectionArea = element(by.xpath("//div[@class[contains(.,'size-selector')]]"));
         this.addToBagButton = element(by.xpath("//button[@data-auto-id='add-to-bag']"));
@@ -37,4 +33,4 @@ class mainPage {
     }
 }
 
-export = mainPage;
+export = mainPageElements;

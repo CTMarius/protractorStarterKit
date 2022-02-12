@@ -9,5 +9,5 @@ Feature: Checkout flow
     When In the chart page I proceed to checkout
 
     Examples:
-      | Region | Search Term | Product Name   | Size |
-      | GB     | running     | Ultraboost 4.0 | 4.5  |
+      | Region | Search Term | Product Name   | Size | Location |
+      | GB     | running     | Ultraboost 4.0 | 4.5  | London   |

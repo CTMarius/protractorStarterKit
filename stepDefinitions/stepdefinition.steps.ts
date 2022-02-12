@@ -1,9 +1,11 @@
 import {Given, When} from "cucumber";
 import {browser} from 'protractor/built';
 import {by, ExpectedConditions} from "protractor";
-import MainPage = require('../pageElements/mainPage');
+import MainPage = require('../pageElements/mainPageElements');
+import SearchResults = require('../pageElements/searchResultsElements');
 
 let mainPage: MainPage = new MainPage();
+let searchResults: SearchResults = new SearchResults();
 let {setDefaultTimeout} = require('cucumber');
 
 setDefaultTimeout(60 * 1000);
@@ -29,8 +31,8 @@ When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, 
     await mainPage.searchField.isPresent().then(async () => {
         await mainPage.searchField.click();
         await mainPage.searchField.sendKeys(keyword);
-        await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.searchResultsContainer), 10000).then(async () => {
-            await browser.executeScript("arguments[0].click();", mainPage.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
+        await browser.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 10000).then(async () => {
+            await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
             await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + productName.toLowerCase().replace(" ", "-")), 30000).then(async () => {
                 if (browser.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
                     await mainPage.signUpdiscountModal.click();
@@ -56,18 +58,15 @@ When(/^I click on the View Bag button and navigate to the chart$/, async () => {
         await mainPage.viewBagButton.click();
         await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart'));
     });
+});
 
-
-    When(/^In the chart page I proceed to checkout$/, async () => {
-        await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart')).then(async () => {
-            await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.checkoutBottomButton), 10000).then(async () => {
-                await mainPage.checkoutBottomButton.click();
-                await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'delivery'));
-            });
+When(/^In the chart page I proceed to checkout$/, async () => {
+    await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart')).then(async () => {
+        await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.checkoutBottomButton), 10000).then(async () => {
+            await mainPage.checkoutBottomButton.click();
+            await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'delivery'));
         });
     });
-
-
 });
 
 
