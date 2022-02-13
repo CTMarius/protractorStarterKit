@@ -70,14 +70,14 @@ When(/^I search for collection points in '(.*)'$/, async (location) => {
     }
 });
 
-    When(/^I select a location and confirm my selection was successful$/, async () => {
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
-        let addressHeading = delivery.storeNameFieldModal.getAttribute('text').toString().toLowerCase();
-        await delivery.selectStoreButton.click();
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeNameFieldLocationOverview), 30000);
-        let addressSelected = delivery.storeNameFieldLocationOverview.getAttribute('text').toString().toLowerCase();
-        await assert.equal(addressSelected, addressHeading, 'The selected address is not correct:' + addressSelected);
-    });
+When(/^I select a location and confirm my selection was successful$/, async () => {
+    await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
+    let addressHeading = delivery.storeNameFieldModal.getAttribute('text').toString().toLowerCase();
+    await delivery.selectStoreButton.click();
+    await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeNameFieldLocationOverview), 30000);
+    let addressSelected = delivery.storeNameFieldLocationOverview.getAttribute('text').toString().toLowerCase();
+    await assert.equal(addressSelected, addressHeading, 'The selected address is not correct:' + addressSelected);
+});
 
 
 
