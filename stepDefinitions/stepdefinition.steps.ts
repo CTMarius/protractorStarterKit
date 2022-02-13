@@ -5,6 +5,7 @@ import MainPage = require('../pageElements/mainPageElements');
 import SearchResults = require('../pageElements/searchResultsElements');
 import Delivery = require('../pageElements/deliveryPageElements');
 import pageActions = require("../pageActions/pageactions");
+import assert = require("assert");
 
 let mainPage: MainPage = new MainPage();
 let searchResults: SearchResults = new SearchResults();
@@ -67,15 +68,16 @@ When(/^I search for collection points in '(.*)'$/, async (location) => {
         await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
         await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
     }
+});
 
     When(/^I select a location and confirm my selection was successful$/, async () => {
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
         await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
-        //step to read the adres
+        let addressHeading = delivery.storeNameFieldModal.getAttribute('text').toString().toLowerCase();
         await delivery.selectStoreButton.click();
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
-        //step to confirm adres
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeNameFieldLocationOverview), 30000);
+        let addressSelected = delivery.storeNameFieldLocationOverview.getAttribute('text').toString().toLowerCase();
+        await assert.equal(addressSelected, addressHeading, 'The selected address is not correct:' + addressSelected);
     });
-});
+
 
 

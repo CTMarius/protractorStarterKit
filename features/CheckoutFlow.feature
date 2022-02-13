@@ -6,9 +6,9 @@ Feature: Checkout flow
     When I search for the '<Search Term>' activity and select the product called '<Product Name>'
     And I select the size '<Size>' and add the product '<Product Name>' to my bag
     Then I click on the View Bag button and navigate to the chart
-    When In the chart page I proceed to checkout
+    And In the chart page I proceed to checkout
     And from the '<Module>' module, click '<Item>'
-    And I search for collection points in '<Location>'
+    When I search for collection points in '<Location>'
     And I select a location and confirm my selection was successful
 
     Examples:
