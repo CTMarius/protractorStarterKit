@@ -58,4 +58,24 @@ When(/^In the chart page I proceed to checkout$/, async () => {
     await browser.wait(ExpectedConditions.visibilityOf(delivery.shippingAdressHeading), 30000);
 });
 
+When(/^I search for collection points in '(.*)'$/, async (location) => {
+    await browser.wait(ExpectedConditions.elementToBeClickable(delivery.cityFinderTextField), 30000);
+    await delivery.cityFinderTextField.click();
+    await delivery.cityFinderTextField.sendKeys(location);
+    if (await ExpectedConditions.visibilityOf(delivery.locationValidityCheck)) {
+        await delivery.searchForNearbyCollectionPointsButton.click();
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
+    }
+
+    When(/^I select a location and confirm my selection was successful$/, async () => {
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
+        //step to read the adres
+        await delivery.selectStoreButton.click();
+        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
+        //step to confirm adres
+    });
+});
+
 
