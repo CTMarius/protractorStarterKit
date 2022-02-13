@@ -4,10 +4,12 @@ import {by, ExpectedConditions} from "protractor";
 import MainPage = require('../pageElements/mainPageElements');
 import SearchResults = require('../pageElements/searchResultsElements');
 import Delivery = require('../pageElements/deliveryPageElements');
+import pageActions = require("../pageActions/pageactions");
 
 let mainPage: MainPage = new MainPage();
 let searchResults: SearchResults = new SearchResults();
 let delivery: Delivery = new Delivery();
+let pageactions: pageActions = new pageActions();
 let {setDefaultTimeout} = require('cucumber');
 
 setDefaultTimeout(60 * 1000);
@@ -16,15 +18,8 @@ browser.waitForAngularEnabled(false);
 Given(/^I navigate to the main page and I choose my region '(.*)'$/, async (region) => {
     await browser.get(browser.baseUrl);
     await mainPage.countryModal.isPresent();
-    if (region == 'GB') {
-        await mainPage.countryOptionGB.click();
-        await mainPage.goButton.click();
-        await mainPage.acceptTrackingButton.click();
-    } else if (region == 'NL') {
-        await mainPage.countryOptionNL.click();
-        await mainPage.goButton.click();
-        await mainPage.acceptTrackingButton.click();
-    }
+    await pageactions.countryChoose(region);
+    await mainPage.acceptTrackingButton.click();
 });
 
 When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
