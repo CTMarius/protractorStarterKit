@@ -70,7 +70,7 @@ When(/^I search for collection points in '(.*)'$/, async (location) => {
     }
 });
 
-When(/^I select a location and confirm my selection was successful$/, async () => {
+When(/^In the delivery page, I select a location and confirm my selection was successful$/, async () => {
     await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
     let addressHeading = delivery.storeNameFieldModal.getAttribute('text').toString().toLowerCase();
     await delivery.selectStoreButton.click();
@@ -79,5 +79,16 @@ When(/^I select a location and confirm my selection was successful$/, async () =
     await assert.equal(addressSelected, addressHeading, 'The selected address is not correct:' + addressSelected);
 });
 
+When(/^In the delivery page, I fill in the following billing information$/, async (data) => {
+    let rows = data.hashes();
+    await rows.forEach((row) => {
+        pageactions.fillBillingInfo(row);
+    });
+});
+
+When(/^In the delivery page, I click on the "Review and pay" button$/, async () => {
+    await browser.wait(ExpectedConditions.elementToBeClickable(delivery.reviewAndPayButton), 30000);
+    await delivery.reviewAndPayButton.click();
+});
 
 

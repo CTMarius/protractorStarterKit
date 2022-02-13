@@ -9,8 +9,11 @@ Feature: Checkout flow
     And In the chart page I proceed to checkout
     And from the '<Module>' module, click '<Item>'
     When I search for collection points in '<Location>'
-    And I select a location and confirm my selection was successful
-
+    And In the delivery page, I select a location and confirm my selection was successful
+    And In the delivery page, I fill in the following billing information
+      | FirstName | LastName | Address      | City     | PostCode | Email            |
+      | Test      | User     | Testaddress1 | Testcity | HR47RW   | testemail@grr.la |
+    And In the delivery page, I click on the "Review and pay" button
     Examples:
       | Region | Search Term | Product Name   | Size | Location | Module         | Item                    |
       | GB     | running     | Ultraboost 4.0 | 4.5  | London   | Get your order | From a collection point |
