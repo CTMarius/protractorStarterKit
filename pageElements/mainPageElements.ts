@@ -22,7 +22,7 @@ class mainPageElements {
         this.countryOptionNL = element(by.xpath("//label[@class[contains(.,'gl-radio-input')]]//span[text()='Netherlands']"));
         this.goButton = element(by.xpath("//button[@data-auto-id='choose-delivery-country']"));
         this.acceptTrackingButton = element(by.xpath("//button[@data-auto-id='glass-gdpr-default-consent-accept-button']"));
-        this.signUpdiscountModal = element(by.xpath("//div[@role='dialog' and contains(.,'Sign up')]//button[@class[contains(.,'close')]]"));
+        this.signUpdiscountModal = element(by.xpath("//*[@class[contains(.,'gl-modal__close')]]"));
         this.sizeSelectionArea = element(by.xpath("//div[@class[contains(.,'size-selector')]]"));
         this.addToBagButton = element(by.xpath("//button[@data-auto-id='add-to-bag']"));
         this.addedToBagModal = element(by.xpath("//div[@data-auto-id='added-to-bag-modal']"));

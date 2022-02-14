@@ -29,7 +29,8 @@ When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, 
     await mainPage.searchField.sendKeys(keyword);
     await browser.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 30000);
     await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
-    await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + productName.toLowerCase().replace(" ", "-")), 30000);
+    let urlContent = productName.toLowerCase().replace(" ", "-");
+    await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + urlContent), 30000);
     if (browser.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
         await mainPage.signUpdiscountModal.click();
     }
@@ -37,7 +38,7 @@ When(/^I search for the '(.*)' activity and select the product called '(.*)'$/, 
 
 When(/^I select the size '(.*)' and add the product '(.*)' to my bag$/, async (size, product) => {
     await mainPage.sizeSelectionArea.isPresent();
-    await mainPage.sizeSelectionArea.element(by.xpath("//button/span[text() = " + size + "]")).click();
+    await mainPage.sizeSelectionArea.element(by.xpath("//button/span[text() = '" + size + "']")).click();
     await mainPage.addToBagButton.click();
     await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.addedToBagModal), 30000);
     await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal, product);
@@ -63,7 +64,7 @@ When(/^I search for collection points in '(.*)'$/, async (location) => {
     await browser.wait(ExpectedConditions.elementToBeClickable(delivery.cityFinderTextField), 30000);
     await delivery.cityFinderTextField.click();
     await delivery.cityFinderTextField.sendKeys(location);
-    if (await ExpectedConditions.visibilityOf(delivery.locationValidityCheck)) {
+    if (await ExpectedConditions.visibilityOf(delivery.textFieldValidityCheck)) {
         await delivery.searchForNearbyCollectionPointsButton.click();
         await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
         await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
@@ -81,9 +82,8 @@ When(/^In the delivery page, I select a location and confirm my selection was su
 
 When(/^In the delivery page, I fill in the following billing information$/, async (data) => {
     let rows = data.hashes();
-    await rows.forEach((row) => {
-        pageactions.fillBillingInfo(row);
-    });
+    return pageactions.fillBillingInfo(rows);
+
 });
 
 When(/^In the delivery page, I click on the "Review and pay" button$/, async () => {

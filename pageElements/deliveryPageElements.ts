@@ -11,7 +11,7 @@ class DeliveryPageElements {
     public selectStoreButton: ElementFinder;
     public storeNameFieldModal: ElementFinder;
     public storeNameFieldLocationOverview: ElementFinder;
-    public locationValidityCheck: ElementFinder;
+    public textFieldValidityCheck: ElementFinder;
     public firstNameField: ElementFinder;
     public lastNameField: ElementFinder;
     public addressField: ElementFinder;
@@ -30,7 +30,7 @@ class DeliveryPageElements {
         this.selectStoreButton = element(by.xpath("//button[@data-auto-id='select-store-button']"));
         this.storeNameFieldModal = element(by.xpath("//*[@data-auto-id='store-locator-modal']//*[@data-auto-id='store-name']"));
         this.storeNameFieldLocationOverview = element(by.xpath("//*[@data-auto-id='pickup-points-locator']//*[@data-auto-id='store-name']"));
-        this.locationValidityCheck = element(by.xpath("//*[@id='app']//div[@class[contains(.,'form-item--success')]]"));
+        this.textFieldValidityCheck = element(by.xpath("//*[@id='app']//div[@class[contains(.,'form-item--success')]]"));
         this.firstNameField = element(by.id("billingAddress-firstName"));
         this.lastNameField = element(by.id("billingAddress-lastName"));
         this.addressField = element(by.xpath("//input[@id[contains(.,'billingAddress-address1')]]"));

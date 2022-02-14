@@ -11,9 +11,10 @@ Feature: Checkout flow
     When I search for collection points in '<Location>'
     And In the delivery page, I select a location and confirm my selection was successful
     And In the delivery page, I fill in the following billing information
-      | FirstName | LastName | Address      | City     | PostCode | Email            |
-      | Test      | User     | Testaddress1 | Testcity | HR47RW   | testemail@grr.la |
+      | FirstName | LastName | Address | City   | PostCode | Email        |
+      | Test      | User     | Address | London | HR47RW   | email@grr.la |
     And In the delivery page, I click on the "Review and pay" button
+
     Examples:
       | Region | Search Term | Product Name   | Size | Location | Module         | Item                    |
-      | GB     | running     | Ultraboost 4.0 | 4.5  | London   | Get your order | From a collection point |
+      | GB     | running     | FastImpact Luxe | XS A-C | London   | Get your order | From a collection point |
