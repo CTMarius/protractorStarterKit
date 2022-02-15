@@ -8,7 +8,7 @@ class SearchResultsElements {
 
     constructor() {
         this.paymentMethodContainer = element(by.xpath("//div[@data-auto-id='payment-method']"));
-        this.paymentMethodLabel = element(by.xpath("//div[@data-auto-id='payment-method']//label[@class[contains(.,'gl-radio-input__option')]]//input"));
+        this.paymentMethodLabel = element(by.xpath("//div[@data-auto-id='payment-method']//label[@class[contains(.,'gl-radio-input__option')]]"));
     }
 }
 
