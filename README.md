@@ -24,7 +24,7 @@ to using old-fashioned browser-waits.
 1. Install NodeJS (and perhaps reboot your system)
 2. Clone or download this repository.
 3. In the root folder of the project, open a command prompt with admin rights and run "npm install".
-4. Once step 2 is finished, run "npm install grunt-cli -g" in the command prompt. You might need to restart your
+4. Once step 3 is finished, run "npm install grunt-cli -g" in the command prompt. You might need to restart your
    terminal after this is finished.
 5. Run "e2e --baseUrl=https://www.adidas.co.uk/" in the command line terminal in order to run the tests or use the
    integrated grunt task runner your IDE.
