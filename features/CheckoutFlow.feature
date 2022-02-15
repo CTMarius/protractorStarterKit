@@ -16,7 +16,8 @@ Feature: Checkout flow
     And In the delivery page, I click on the "Review and pay" button and proceed to the payment page
     Then In the payment page, I expect to have the following payment methods available
       | Payment Method |
-      | FirstName      |
+      | Credit Card    |
+      | PayPal         |
     Examples:
       | Region | Search Term | Product Name    | Size   | Location | Module         | Item                    |
       | GB     | running     | FastImpact Luxe | XS A-C | London   | Get your order | From a collection point |

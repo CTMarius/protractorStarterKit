@@ -32,10 +32,9 @@ When(/^In the delivery page, I select a location and confirm my selection was su
     await assert.equal(addressSelected, addressHeading, 'The selected address is not correct:' + addressSelected);
 });
 
-When(/^In the delivery page, I fill in the following billing information$/, async (data) => {
+When(/^In the delivery page, I fill in the following billing information$/, (data) => {
     let rows = data.hashes();
     return pageactions.fillBillingInfo(rows);
-
 });
 
 When(/^In the delivery page, I click on the "Review and pay" button and proceed to the payment page$/, async () => {
