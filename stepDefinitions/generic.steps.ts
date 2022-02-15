@@ -17,7 +17,7 @@ Given(/^I navigate to the main page and I choose my region '(.*)'$/, async (regi
 Then(/^from the '(.*)' module, click '(.*)'$/, async (module, item) => {
     let moduleElem = element(by.xpath('//div[contains(.,"' + module + '")]'));
     let itemElem = moduleElem.element(by.xpath('//p[contains(.,"' + item + '")]'))
-    await browser.wait(ExpectedConditions.elementToBeClickable(itemElem), 30000);
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(itemElem), 30000);
     await itemElem.click();
 });
 

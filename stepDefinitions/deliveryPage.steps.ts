@@ -9,13 +9,13 @@ let delivery: Delivery = new Delivery();
 let pageactions: pageActions = new pageActions();
 
 When(/^In the delivery page, I search for collection points in '(.*)'$/, async (location) => {
-    await browser.wait(ExpectedConditions.elementToBeClickable(delivery.cityFinderTextField), 30000);
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(delivery.cityFinderTextField), 30000);
     await delivery.cityFinderTextField.click();
     await delivery.cityFinderTextField.sendKeys(location);
     if (await ExpectedConditions.visibilityOf(delivery.textFieldValidityCheck)) {
         await delivery.searchForNearbyCollectionPointsButton.click();
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
-        await browser.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
+        await browser.driver.wait(ExpectedConditions.elementToBeClickable(delivery.storeLocatorModal), 30000);
+        await browser.driver.wait(ExpectedConditions.elementToBeClickable(delivery.selectStoreButton), 30000);
     }
 });
 
