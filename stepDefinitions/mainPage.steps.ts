@@ -1,11 +1,21 @@
-import {When} from "cucumber";
+import {Given, When} from "cucumber";
 import {browser} from 'protractor/built';
 import {by, ExpectedConditions} from "protractor";
 import MainPage = require('../pageElements/mainPageElements');
 import SearchResults = require('../pageElements/searchResultsElements');
+import PageActions = require('../pageActions/pageactions');
 
 let mainPage: MainPage = new MainPage();
 let searchResults: SearchResults = new SearchResults();
+let pagections: PageActions = new PageActions();
+
+
+Given(/^I navigate to the main page and I choose the region: '(.*)'$/, async (region) => {
+    await browser.get(browser.baseUrl);
+    await mainPage.countryModal.isPresent();
+    await pagections.countryChoose(region);
+    await mainPage.acceptTrackingButton.click();
+});
 
 When(/^In the main page, I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
     await mainPage.searchField.isPresent();
