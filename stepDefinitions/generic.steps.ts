@@ -7,7 +7,7 @@ import pageActions = require("../pageActions/pageactions");
 let mainPage: MainPage = new MainPage();
 let pagections: pageActions = new pageActions();
 
-Given(/^I navigate to the main page and I choose my region '(.*)'$/, async (region) => {
+Given(/^I navigate to the main page and I choose the region: '(.*)'$/, async (region) => {
     await browser.get(browser.baseUrl);
     await mainPage.countryModal.isPresent();
     await pagections.countryChoose(region);

@@ -2,7 +2,7 @@ Feature: Checkout flow
 
   @checkoutFlow
   Scenario Outline: Checkout Flow
-    Given I navigate to the main page and I choose my region '<Region>'
+    Given I navigate to the main page and I choose the region: '<Region>'
     When In the main page, I search for the '<Search Term>' activity and select the product called '<Product Name>'
     And In the product details page, I select the size '<Size>' and add the product '<Product Name>' to my bag
     Then In the product details page, view bag modal, I click on the View Bag button and navigate to the chart
