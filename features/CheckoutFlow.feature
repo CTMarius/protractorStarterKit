@@ -18,6 +18,7 @@ Feature: Checkout flow
       | PaymentMethod     |
       | CREDIT/DEBIT CARD |
       | PAYPAL            |
+
     Examples:
       | Region | Search Term | Product Name    | Size   | Location | Module         | Item                    |
       | GB     | running     | FastImpact Luxe | XS A-C | London   | Get your order | From a collection point |
