@@ -6,10 +6,6 @@ import SearchResults = require('../pageElements/searchResultsElements');
 
 let mainPage: MainPage = new MainPage();
 let searchResults: SearchResults = new SearchResults();
-let {setDefaultTimeout} = require('cucumber');
-
-setDefaultTimeout(60 * 1000);
-browser.waitForAngularEnabled(false);
 
 When(/^In the main page, I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
     await mainPage.searchField.isPresent();

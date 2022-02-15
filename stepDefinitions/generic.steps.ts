@@ -4,9 +4,6 @@ import {by, element, ExpectedConditions} from "protractor";
 import MainPage = require('../pageElements/mainPageElements');
 import pageActions = require("../pageActions/pageactions");
 
-let {setDefaultTimeout} = require('cucumber');
-setDefaultTimeout(60 * 1000);
-browser.waitForAngularEnabled(false);
 let mainPage: MainPage = new MainPage();
 let pagections: pageActions = new pageActions();
 

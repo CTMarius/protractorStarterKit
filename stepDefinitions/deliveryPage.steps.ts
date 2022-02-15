@@ -7,10 +7,6 @@ import assert = require("assert");
 
 let delivery: Delivery = new Delivery();
 let pageactions: pageActions = new pageActions();
-let {setDefaultTimeout} = require('cucumber');
-
-setDefaultTimeout(60 * 1000);
-browser.waitForAngularEnabled(false);
 
 When(/^In the delivery page, I search for collection points in '(.*)'$/, async (location) => {
     await browser.wait(ExpectedConditions.elementToBeClickable(delivery.cityFinderTextField), 30000);

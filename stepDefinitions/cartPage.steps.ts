@@ -6,10 +6,6 @@ import Delivery = require('../pageElements/deliveryPageElements');
 
 let mainPage: MainPage = new MainPage();
 let delivery: Delivery = new Delivery();
-let {setDefaultTimeout} = require('cucumber');
-
-setDefaultTimeout(60 * 1000);
-browser.waitForAngularEnabled(false);
 
 When(/^In the chart page, I proceed to checkout$/, async () => {
     await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'cart'), 30000);

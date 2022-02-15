@@ -4,10 +4,6 @@ import {by, ExpectedConditions} from "protractor";
 import MainPage = require('../pageElements/mainPageElements');
 
 let mainPage: MainPage = new MainPage();
-let {setDefaultTimeout} = require('cucumber');
-
-setDefaultTimeout(60 * 1000);
-browser.waitForAngularEnabled(false);
 
 When(/^In the product details page, I select the size '(.*)' and add the product '(.*)' to my bag$/, async (size, product) => {
     await mainPage.sizeSelectionArea.isPresent();
@@ -16,7 +12,6 @@ When(/^In the product details page, I select the size '(.*)' and add the product
     await browser.wait(ExpectedConditions.elementToBeClickable(mainPage.addedToBagModal), 30000);
     await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal, product);
     await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal.element(by.xpath("//div[@class[contains(.,'order-summary')]]")), "1")
-
 });
 
 When(/^In the product details page, view bag modal, I click on the View Bag button and navigate to the chart$/, async () => {
