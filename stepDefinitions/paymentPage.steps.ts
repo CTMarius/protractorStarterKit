@@ -7,6 +7,6 @@ When(/^In the payment page, I expect to have the following payment methods avail
     await browser.wait(ExpectedConditions.urlContains(browser.baseUrl + 'payment'), 30000);
     for (let i = 0; i < rows.length; i++) {
         let paymentOption = rows[i].PaymentMethod.toString();
-        await ExpectedConditions.elementToBeClickable(element(by.xpath("//input[@value='" + paymentOption + "']")));
+        await browser.wait(element(by.xpath("//input[@value='" + paymentOption + "']")).isDisplayed(), 30000);
     }
 });
