@@ -13,8 +13,8 @@ module.exports = function (grunt) {
                 options: {
                     configFile: 'protractorConf.js',
                     keepAlive: true,
-                    args: { baseUrl:  grunt.option('baseUrl') }
-                }
+                    args: {baseUrl: grunt.option('baseUrl')},
+                },
             }
         }
     });
