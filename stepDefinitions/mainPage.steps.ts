@@ -25,10 +25,10 @@ When(/^In the main page, I search for the '(.*)' activity and select the product
     await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 30000);
     await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
     let urlContent = productName.toLowerCase().replace(" ", "-");
-    await browser.driver.wait(ExpectedConditions.urlContains(browser.baseUrl + urlContent), 30000);
     if (browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
         await mainPage.signUpdiscountModal.click();
     }
+    await browser.driver.wait(ExpectedConditions.urlContains(browser.baseUrl + urlContent), 30000);
 });
 
 When(/^In the main page, I search for the '(.*)' activity and select the first product$/, async (keyword) => {

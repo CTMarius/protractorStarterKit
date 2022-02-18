@@ -21,4 +21,4 @@ Feature: Checkout flow with specific product
 
     Examples:
       | Region | Search Term | Product Name    | Size   | Location | Module         | Item                    |
-      | GB     | running     | Always Original Graphic | 4    | London   | Get your order | From a collection point |
+      | GB     | running     | Always Original | 4    | London   | Get your order | From a collection point |
