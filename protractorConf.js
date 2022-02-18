@@ -6,16 +6,18 @@ exports.config = {
 
     specs: [
         'features/*.feature',
-        'async_await.js'
     ],
 
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
             args: [
-                'start-maximized'
-            ]
-        }
+                'start-maximized',
+                '--disk-cache-size= 0'
+            ],
+        },
+        shardTestFiles: true,
+        maxInstances: 2
     },
 
     framework: 'custom',

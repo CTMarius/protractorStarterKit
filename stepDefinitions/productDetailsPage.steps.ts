@@ -14,6 +14,15 @@ When(/^In the product details page, I select the size '(.*)' and add the product
     await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal.element(by.xpath("//div[@class[contains(.,'order-summary')]]")), "1")
 });
 
+When(/^In the product details page, I select a size and add the product to my bag$/, async () => {
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.sizeSelectionArea), 30000);
+    await mainPage.sizeSelectionArea.element(by.xpath("//button[1]")).click();
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.addToBagButton), 30000);
+    await mainPage.addToBagButton.click();
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.addedToBagModal), 30000);
+    await ExpectedConditions.textToBePresentInElement(mainPage.addedToBagModal.element(by.xpath("//div[@class[contains(.,'order-summary')]]")), "1")
+});
+
 When(/^In the product details page, view bag modal, I click on the View Bag button and navigate to the chart$/, async () => {
     await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.viewBagButton), 30000);
     await mainPage.viewBagButton.click();

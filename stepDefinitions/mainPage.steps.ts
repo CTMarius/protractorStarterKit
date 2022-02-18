@@ -12,9 +12,10 @@ let pagections: PageActions = new PageActions();
 
 Given(/^I navigate to the main page and I choose the region: '(.*)'$/, async (region) => {
     await browser.get(browser.baseUrl);
-    await mainPage.countryModal.isPresent();
-    await pagections.countryChoose(region);
-    await mainPage.acceptTrackingButton.click();
+    if (await mainPage.countryModal.isPresent()) {
+        await pagections.countryChoose(region);
+        await mainPage.acceptTrackingButton.click();
+    }
 });
 
 When(/^In the main page, I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
@@ -28,4 +29,19 @@ When(/^In the main page, I search for the '(.*)' activity and select the product
     if (browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
         await mainPage.signUpdiscountModal.click();
     }
+});
+
+When(/^In the main page, I search for the '(.*)' activity and select the first product$/, async (keyword) => {
+    await mainPage.searchField.isPresent();
+    await mainPage.searchField.click();
+    await mainPage.searchField.sendKeys(keyword);
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 30000);
+    await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.productSuggestion), 30000);
+    await searchResults.productSuggestion.element(by.xpath('//span[@class[contains(.,"product-name")]][1]')).getAttribute('innerText').then(async (text) => {
+        await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[@class[contains(.,"product-name")]][1]')).getWebElement());
+        if (browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
+            await mainPage.signUpdiscountModal.click();
+        }
+        await browser.driver.wait(ExpectedConditions.textToBePresentInElement(searchResults.productNameHeader, text), 30000);
+    });
 });
