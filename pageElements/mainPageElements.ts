@@ -14,6 +14,7 @@ class mainPageElements {
     public addedToBagModal: ElementFinder;
     public viewBagButton: ElementFinder;
     public checkoutBottomButton: ElementFinder;
+    public firstSizeButton: ElementFinder;
 
     constructor() {
         this.searchField = element(by.xpath("//input[@data-auto-id = 'searchinput']"));
@@ -24,6 +25,7 @@ class mainPageElements {
         this.acceptTrackingButton = element(by.xpath("//button[@data-auto-id='glass-gdpr-default-consent-accept-button']"));
         this.signUpdiscountModal = element(by.xpath("//*[@class[contains(.,'gl-modal__close')]]"));
         this.sizeSelectionArea = element(by.xpath("//div[@class[contains(.,'size-selector')]]"));
+        this.firstSizeButton = element(by.xpath("//div[@class[contains(.,'size-selector')]]//button[1]"));
         this.addToBagButton = element(by.xpath("//button[@data-auto-id='add-to-bag']"));
         this.addedToBagModal = element(by.xpath("//div[@data-auto-id='added-to-bag-modal']"));
         this.viewBagButton = element(by.xpath("//a[@data-auto-id='view-bag-desktop']"));

@@ -16,7 +16,7 @@ When(/^In the product details page, I select the size '(.*)' and add the product
 
 When(/^In the product details page, I select a size and add the product to my bag$/, async () => {
     await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.sizeSelectionArea), 30000);
-    await mainPage.sizeSelectionArea.element(by.xpath("//button[1]")).click();
+    await mainPage.firstSizeButton.click();
     await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.addToBagButton), 30000);
     await mainPage.addToBagButton.click();
     await browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.addedToBagModal), 30000);
