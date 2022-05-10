@@ -12,11 +12,11 @@ exports.config = {
   'browserName': 'firefox'
         }, {
   'browserName': 'chrome',
-        'chromeOptions': {
+        'chromeOptions': '{
             'args: [
                 'start-maximized',
                 '--disk-cache-size= 0'
-            ],
+            ]',
         }',
         shardTestFiles: true,
         maxInstances: 2
