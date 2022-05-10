@@ -59,7 +59,6 @@ order to find out how to write smarter scenarios: https://cucumber.io/docs/gherk
 - add api testing support.
 - configure reports to display duration.
 - add mobile integration.
-- expand the testing examples. -> Done
 
 ### Documentation:
 
