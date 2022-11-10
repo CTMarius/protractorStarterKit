@@ -1,47 +1,26 @@
-import {Given, When} from "cucumber";
-import {browser} from 'protractor/built';
-import {by, ExpectedConditions} from "protractor";
-import MainPage = require('../pageElements/mainPageElements');
-import SearchResults = require('../pageElements/searchResultsElements');
+import { Given, When, Then } from "cucumber";
+import { browser } from 'protractor/built';
 import PageActions = require('../pageActions/pageactions');
 
-let mainPage: MainPage = new MainPage();
-let searchResults: SearchResults = new SearchResults();
 let pagections: PageActions = new PageActions();
 
 
-Given(/^I navigate to the main page and I choose the region: '(.*)'$/, async (region) => {
+Given(/^I navigate to the main page$/, async () => {
     await browser.get(browser.baseUrl);
-    if (await mainPage.countryModal.isPresent()) {
-        await pagections.countryChoose(region);
-        await mainPage.acceptTrackingButton.click();
-    }
 });
 
-When(/^In the main page, I search for the '(.*)' activity and select the product called '(.*)'$/, async (keyword, productName) => {
-    await mainPage.searchField.isPresent();
-    await mainPage.searchField.click();
-    await mainPage.searchField.sendKeys(keyword);
-    await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 30000);
-    await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[contains(.,"' + productName + '")]')).getWebElement());
-    let urlContent = productName.toLowerCase().replace(" ", "-");
-    if (browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
-        await mainPage.signUpdiscountModal.click();
-    }
-    await browser.driver.wait(ExpectedConditions.urlContains(browser.baseUrl + urlContent), 30000);
+When(/^In the main page, I type the '(.*)' in the text field$/, async (keyword: string) => {
+    await pagections.typeInTextField(keyword);
 });
 
-When(/^In the main page, I search for the '(.*)' activity and select the first product$/, async (keyword) => {
-    await mainPage.searchField.isPresent();
-    await mainPage.searchField.click();
-    await mainPage.searchField.sendKeys(keyword);
-    await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.searchResultsContainer), 30000);
-    await browser.driver.wait(ExpectedConditions.elementToBeClickable(searchResults.productSuggestion), 30000);
-    await searchResults.productSuggestion.element(by.xpath('//span[@class[contains(.,"product-name")]][1]')).getAttribute('innerText').then(async (text) => {
-        await browser.executeScript("arguments[0].click();", searchResults.productSuggestion.element(by.xpath('//span[@class[contains(.,"product-name")]][1]')).getWebElement());
-        if (browser.driver.wait(ExpectedConditions.elementToBeClickable(mainPage.signUpdiscountModal), 30000)) {
-            await mainPage.signUpdiscountModal.click();
-        }
-        await browser.driver.wait(ExpectedConditions.textToBePresentInElement(searchResults.productNameHeader, text), 30000);
-    });
+When(/^In the main page, I clear the text field$/, async () => {
+    await pagections.clearTextField();
+});
+
+Then(/^In the main page, the save button is '(.*)'$/, async (status: string) => {
+    await pagections.checkStatus(status);
+});
+
+When(/^In the main page, I click on the save button'$/, async () => {
+    await pagections.saveText();
 });
