@@ -1,5 +1,5 @@
 {
-  "name": "protractorDemo",
+  "name": "Protractor Demo",
   "version": "0.0.1",
   "scripts": {
     "tsc": "tsc",
@@ -10,6 +10,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
+    "@types/node": "^18.11.9",
     "babel-core": "^6.11.4",
     "babel-loader": "^7.1.0",
     "babel-preset-es2015": "^6.9.0",
@@ -18,7 +19,7 @@
     "chai-as-promised": "^7.1.1",
     "cucumber": "^5.1.0",
     "fs": "0.0.1-security",
-    "grunt": "^1.3.0",
+    "grunt": "^1.5.0",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-jshint": "^3.1.0",
     "grunt-contrib-nodeunit": "^4.0.0",
@@ -28,7 +29,7 @@
     "log4js": "^6.4.0",
     "log4js-protractor-appender": "^1.1.2",
     "multiple-cucumber-html-reporter": "^1.11.10",
-    "nconf": "^0.12.0",
+    "nconf": "^0.11.4",
     "os": "0.1.1",
     "protractor": "^6.0.0",
     "protractor-cucumber-framework": "^6.1.3",
