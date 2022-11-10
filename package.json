@@ -28,7 +28,7 @@
     "load-grunt-tasks": "^5.0.0",
     "log4js": "^6.4.0",
     "log4js-protractor-appender": "^1.1.2",
-    "multiple-cucumber-html-reporter": "^1.11.10",
+    "multiple-cucumber-html-reporter": "^3.0.0",
     "nconf": "^0.11.4",
     "os": "0.1.1",
     "protractor": "^6.0.0",
