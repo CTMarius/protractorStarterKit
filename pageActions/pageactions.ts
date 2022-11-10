@@ -1,38 +1,38 @@
 import MainPage = require('../pageElements/mainPageElements');
-import Delivery = require('../pageElements/deliveryPageElements');
-import {ExpectedConditions} from "protractor";
+import { expect } from 'chai'
 
 let mainPage: MainPage = new MainPage();
-let delivery: Delivery = new Delivery();
+
 
 class pageActions {
-    public async countryChoose(countryCode) {
-        if (countryCode == 'GB') {
-            await mainPage.countryOptionGB.click();
-            await mainPage.goButton.click();
-        } else if (countryCode == 'NL') {
-            await mainPage.countryOptionNL.click();
-            await mainPage.goButton.click();
+
+    public async typeInTextField(keyword: string) {
+        await mainPage.textField.isPresent();
+        await mainPage.textField.click();
+        await mainPage.textField.sendKeys(keyword);
+    }
+
+    public async clearTextField() {
+        await mainPage.textField.isPresent();
+        await mainPage.textField.clear();
+    }
+    
+    public async saveText() {
+        await mainPage.saveButton.isPresent();
+        await mainPage.saveButton.isEnabled();
+        await mainPage.saveButton.click();
+    }
+
+    public async checkStatus(status: string) {
+        await mainPage.saveButton.isDisplayed();
+        if (status == 'enabled') {
+            await expect(await mainPage.saveButton.isEnabled()).to.be.true;
+        } else if (status == 'disabled') {
+            await expect(await mainPage.saveButton.isEnabled()).to.be.false;
+        } else {
+            await expect(status).to.be.oneOf(['enabled', 'disabled'])
         }
     }
-
-    public fillTextFieldWithValidation(textField, textValue) {
-        return textField.click().then(() => {
-            return textField.sendKeys(textValue).then(() => {
-                return ExpectedConditions.visibilityOf(delivery.textFieldValidityCheck)
-            })
-        })
-    }
-
-    public async fillBillingInfo(rows) {
-        await this.fillTextFieldWithValidation(delivery.firstNameField, rows[0].FirstName);
-        await this.fillTextFieldWithValidation(delivery.lastNameField, rows[0].LastName);
-        await this.fillTextFieldWithValidation(delivery.addressField, rows[0].Address);
-        await this.fillTextFieldWithValidation(delivery.townField, rows[0].City);
-        await this.fillTextFieldWithValidation(delivery.postCodeField, rows[0].PostCode);
-        await this.fillTextFieldWithValidation(delivery.emailField, rows[0].Email);
-    }
-
 
 }
 

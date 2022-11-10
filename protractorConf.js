@@ -1,5 +1,9 @@
-const {browser} = require("protractor");
-require('ts-node').register({project: 'tsconfig.json'});
+const {
+    browser
+} = require("protractor");
+require('ts-node').register({
+    project: 'tsconfig.json'
+});
 exports.config = {
 
     directConnect: false,
@@ -7,23 +11,17 @@ exports.config = {
     specs: [
         'features/*.feature',
     ],
-  
+
     multiCapabilities: [{
-  'browserName': 'firefox'
-        }, {
-  'browserName': 'chrome',
-        'chromeOptions': '{
-            'args: [
-                'start-maximized',
-                '--disk-cache-size= 0'
-            ]',
-        }',
+        'browserName': 'firefox'
+    }, {
+        'browserName': 'chrome',        
         shardTestFiles: true,
         maxInstances: 2
-}]
+    }],
 
     framework: 'custom',
-    frameworkPath:require.resolve('protractor-cucumber-framework'),
+    frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
         require: ['stepDefinitions/*.steps.ts', "support/*.ts"],
         tags: true,
