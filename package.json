@@ -1,5 +1,5 @@
 {
-  "name": "protractorDemo",
+  "name": "Protractor Demo",
   "version": "0.0.1",
   "scripts": {
     "tsc": "tsc",

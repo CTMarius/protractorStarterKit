@@ -1,6 +1,6 @@
 Feature: Text field
 
- @savebuttonstatus 
+  @savebuttonstatus
   Scenario Outline: Save button changes status
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
@@ -12,7 +12,7 @@ Feature: Text field
       | string | status  | newstatus |
       | GB     | enabled | disabled  |
 
-@typeinfieldandsave
+  @typeinfieldandsave
   Scenario Outline: Save button changes status
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field

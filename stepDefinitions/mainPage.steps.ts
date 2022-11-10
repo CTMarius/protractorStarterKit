@@ -1,9 +1,7 @@
 import { Given, When, Then } from "cucumber";
 import { browser } from 'protractor/built';
-import MainPage = require('../pageElements/mainPageElements');
 import PageActions = require('../pageActions/pageactions');
 
-let mainPage: MainPage = new MainPage();
 let pagections: PageActions = new PageActions();
 
 
@@ -23,6 +21,6 @@ Then(/^In the main page, the save button is '(.*)'$/, async (status: string) => 
     await pagections.checkStatus(status);
 });
 
-When(/^In the main page, I click on the save button$/, async () => {
+When(/^In the main page, I click on the save button'$/, async () => {
     await pagections.saveText();
 });
