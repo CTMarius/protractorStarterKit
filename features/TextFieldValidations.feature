@@ -13,7 +13,7 @@ Feature: Text field
       | GB     | enabled | disabled  |
 
   @typeinfieldandsave
-  Scenario Outline: Save button changes status
+  Scenario Outline: Save text
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
     And In the main page, I click on the save button
