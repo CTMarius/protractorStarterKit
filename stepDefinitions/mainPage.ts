@@ -9,7 +9,7 @@ Given(/^I navigate to the main page$/, async () => {
     await browser.get(browser.baseUrl);
 });
 
-When(/^In the main page, I type the (.*) in the text field$/, async (keyword) => {
+When(/^In the main page, I type the (.*) in the text field$/, async (keyword: string) => {
     await pagections.typeInTextField(keyword);
 });
 
@@ -17,7 +17,7 @@ When(/^In the main page, I clear the text field$/, async () => {
     await pagections.clearTextField();
 });
 
-Then(/^In the main page, the save button is (.*)$/, async (status) => {
+Then(/^In the main page, the save button is (.*)$/, async (status: string) => {
     await pagections.checkStatus(status);
 });
 
