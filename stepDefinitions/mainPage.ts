@@ -21,6 +21,6 @@ Then(/^In the main page, the save button is (.*)$/, async (status: string) => {
     await pagections.checkStatus(status);
 });
 
-When(/^In the main page, I click on the save button'$/, async () => {
+When(/^In the main page, I click on the save button$/, async () => {
     await pagections.saveText();
 });
