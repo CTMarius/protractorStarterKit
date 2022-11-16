@@ -1,6 +1,6 @@
 import { Given, When, Then } from "cucumber";
 import { browser } from 'protractor/built';
-import PageActions = require('../pageActions/pageactions');
+import PageActions = require('../pageActions/pageActions');
 
 let pagections: PageActions = new PageActions();
 
