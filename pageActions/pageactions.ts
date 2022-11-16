@@ -7,6 +7,11 @@ let mainPage: MainPage = new MainPage();
 
 class pageActions {
 
+    public async assertTextFieldContent(keyword: string) {
+        await mainPage.textField.isPresent();
+        await expect((await mainPage.textField.getAttribute('innerText')).toString()).to.include(keyword);
+    }
+
     public async typeInTextField(keyword: string) {
         await mainPage.textField.isPresent();
         await mainPage.textField.click();
@@ -17,7 +22,7 @@ class pageActions {
         await mainPage.textField.isPresent();
         await mainPage.textField.clear();
     }
-    
+
     public async saveText() {
         await mainPage.saveButton.isPresent();
         await mainPage.saveButton.isEnabled();
@@ -26,7 +31,7 @@ class pageActions {
 
     public async selectDate(date: string) {
         await mainPage.datePicker.isPresent();
-        await mainPage.datePicker.isEnabled();        
+        await mainPage.datePicker.isEnabled();
         await mainPage.datePicker.sendKeys(date);
         await mainPage.datePicker.sendKeys(protractor.Key.TAB);
     }

@@ -12,7 +12,7 @@ Feature: Notes application
       | string | status  | newstatus |
       | GB     | enabled | disabled  |
 
-  @testField
+  @textField
   Scenario Outline: Save text
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
@@ -27,7 +27,8 @@ Feature: Notes application
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
     And In the main page, I select the following date <date>
+    Then In the main page, the text field contains <string>
 
     Examples: 
-      | date     |
-      | 09252013 |
+      | date     | string |
+      | 09252013 |        |

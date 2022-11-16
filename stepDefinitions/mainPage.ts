@@ -25,10 +25,10 @@ When(/^In the main page, I click on the save button$/, async () => {
     await pagections.saveText();
 });
 
-When(/^In the main page, I select the following date (.*)$/, async (date:string) => {
-    await pagections.selectDate(date);   
+When(/^In the main page, I select the following date (.*)$/, async (date: string) => {
+    await pagections.selectDate(date);
 });
 
-Then(/^In the main page, the save button is (.*)$/, async (status: string) => {
-    await pagections.checkStatus(status);
+Then(/^In the main page, the text field contains (.*)$/, async (keyword: string) => {
+    await pagections.assertTextFieldContent(keyword);
 });
