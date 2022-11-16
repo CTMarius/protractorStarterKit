@@ -9,7 +9,7 @@ class pageActions {
 
     public async assertTextFieldContent(keyword: string) {
         await mainPage.textField.isPresent();
-        await expect((await mainPage.textField.getAttribute('innerText')).toString()).to.include(keyword);
+        await expect((await mainPage.textField.getAttribute('innerText')).toString(), 'The text field does not include the provided input string: "' + keyword +'"', 'Provided input string is included').to.include(keyword);
     }
 
     public async typeInTextField(keyword: string) {
@@ -39,11 +39,11 @@ class pageActions {
     public async checkStatus(status: string) {
         await mainPage.saveButton.isDisplayed();
         if (status == 'enabled') {
-            await expect(await mainPage.saveButton.isEnabled()).to.be.true;
+            await expect(await mainPage.saveButton.isEnabled(), 'The element is disabled. It should be enabled', 'Element status is enabled').to.be.true;
         } else if (status == 'disabled') {
-            await expect(await mainPage.saveButton.isEnabled()).to.be.false;
+            await expect(await mainPage.saveButton.isEnabled(), 'The element is enabled. It should be disabled', 'Element status is disabled').to.be.false;
         } else {
-            await expect(status).to.be.oneOf(['enabled', 'disabled'])
+            await expect(status).to.be.oneOf(['enabled', 'disabled'], 'Input string should be either enabled or disabled. Please check the correctness of the example in the feature file.')
         }
     }
 
