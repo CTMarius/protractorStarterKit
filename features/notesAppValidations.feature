@@ -1,4 +1,4 @@
-Feature: Text field
+Feature: Notes application
 
   @saveButton
   Scenario Outline: Save button changes status
