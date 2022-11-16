@@ -1,6 +1,6 @@
 Feature: Text field
 
-  @savebuttonstatus
+  @saveButton
   Scenario Outline: Save button changes status
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
@@ -12,7 +12,7 @@ Feature: Text field
       | string | status  | newstatus |
       | GB     | enabled | disabled  |
 
-  @typeinfieldandsave
+  @testField
   Scenario Outline: Save text
     Given I navigate to the main page
     When In the main page, I type the <string> in the text field
@@ -21,3 +21,13 @@ Feature: Text field
     Examples: 
       | string |
       | GB     |
+
+  @datePicker
+  Scenario Outline: Set a different date
+    Given I navigate to the main page
+    When In the main page, I type the <string> in the text field
+    And In the main page, I select the following date <date>
+
+    Examples: 
+      | date     |
+      | 09252013 |

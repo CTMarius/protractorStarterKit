@@ -1,5 +1,6 @@
 import MainPage = require('../pageElements/mainPageElements');
 import { expect } from 'chai'
+import { protractor } from 'protractor';
 
 let mainPage: MainPage = new MainPage();
 
@@ -21,6 +22,13 @@ class pageActions {
         await mainPage.saveButton.isPresent();
         await mainPage.saveButton.isEnabled();
         await mainPage.saveButton.click();
+    }
+
+    public async selectDate(date: string) {
+        await mainPage.datePicker.isPresent();
+        await mainPage.datePicker.isEnabled();        
+        await mainPage.datePicker.sendKeys(date);
+        await mainPage.datePicker.sendKeys(protractor.Key.TAB);
     }
 
     public async checkStatus(status: string) {
