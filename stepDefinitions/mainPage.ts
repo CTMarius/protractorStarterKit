@@ -1,34 +1,31 @@
 import { Given, When, Then } from "cucumber";
 import { browser } from 'protractor/built';
-import PageActions = require('../pageActions/pageActions');
-
-let pagections: PageActions = new PageActions();
-
+import * as pageActions from '../pageActions/pageActions';
 
 Given(/^I navigate to the main page$/, async () => {
     await browser.get(browser.baseUrl);
 });
 
 When(/^In the main page, I type the (.*) in the text field$/, async (keyword: string) => {
-    await pagections.typeInTextField(keyword);
+    await pageActions.typeInTextField(keyword);
 });
 
 When(/^In the main page, I clear the text field$/, async () => {
-    await pagections.clearTextField();
+    await pageActions.clearTextField();
 });
 
 Then(/^In the main page, the save button is (.*)$/, async (status: string) => {
-    await pagections.checkStatus(status);
+    await pageActions.checkStatus(status);
 });
 
 When(/^In the main page, I click on the save button$/, async () => {
-    await pagections.saveText();
+    await pageActions.saveText();
 });
 
 When(/^In the main page, I select the following date (.*)$/, async (date: string) => {
-    await pagections.selectDate(date);
+    await pageActions.selectDate(date);
 });
 
 Then(/^In the main page, the text field contains (.*)$/, async (keyword: string) => {
-    await pagections.assertTextFieldContent(keyword);
+    await pageActions.assertTextFieldContent(keyword);
 });
