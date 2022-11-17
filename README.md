@@ -1,14 +1,14 @@
 # Protractor Demo
 
-Basic setup to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
+This is basic setup to get QA's to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
 
 ### Components:
 
 This setup uses Protractor in combination with Cucumber, Grunt as a task runner and the
 protractor-multiple-cucumber-html-reporter as a reporting library. Chai was also added as an extra assertion library.
 
-Protractor is an end-to-end test framework for Angular and AngularJS applications, but it can also be used for
-non-angular applications by simply disabling the wait for angular. When used for Angular applications, protractor will
+Protractor is an end-to-end test framework for Angular applications, but it can also be used for non-angular applications
+by simply disabling the wait for angular. When used for Angular applications, protractor will
 automatically wait until the page is fully loaded and will automatically execute the next step once all pending tasks
 are done. Obviously this advantage is lost when using it to test non-angular applications, and you will have to revert
 to using old-fashioned browser-waits.
@@ -17,7 +17,7 @@ to using old-fashioned browser-waits.
 
 1. NodeJs: https://nodejs.org/en/download/
 
-2. Webstorm or any other IDE: https://www.jetbrains.com/webstorm/download/
+2. An IDE of your choice
 
 ### Getting started:
 
@@ -34,8 +34,9 @@ to using old-fashioned browser-waits.
 
 - Scenarios in the feature files.
 - Step definitions in the step definition files.
-- Page objects in the page objects files.
 - Page actions in the page actions files.
+- Page objects in the page objects files.
+
 
 ### Configuring the tests:
 
