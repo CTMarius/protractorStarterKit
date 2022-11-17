@@ -29,3 +29,7 @@ When(/^In the main page, I select the following date (.*)$/, async (date: string
 Then(/^In the main page, the text field contains (.*)$/, async (keyword: string) => {
     await pageActions.assertTextFieldContent(keyword);
 });
+
+Then(/^In the system level, the json file (.*) equals the json file (.*)$/, async (actual:string, expected:string) => {        
+    await pageActions.assertJsonFilesAreIdentical(actual,expected);
+});

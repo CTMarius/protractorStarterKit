@@ -1,6 +1,7 @@
 import MainPage = require('../pageElements/mainPageElements');
 import { expect } from 'chai'
 import { protractor } from 'protractor';
+import * as fileHandler from '../support/fileHandler';
 
 let mainPage: MainPage = new MainPage();
 
@@ -42,4 +43,9 @@ export async function checkStatus(status: string) {
     } else {
         await expect(status).to.be.oneOf(['enabled', 'disabled'], 'Input string should be either enabled or disabled. Please check the correctness of the example in the feature file.')
     }
+}
+
+export async function assertJsonFilesAreIdentical(actual: string, expected: string) {
+    const compResult = await fileHandler.compareTwoJsonFiles(actual, expected);    
+    await expect(compResult).to.be.empty;
 }
