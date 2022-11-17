@@ -32,3 +32,12 @@ Feature: Notes application
     Examples: 
       | date     | string |
       | 09252013 |        |
+
+  @compareJsonFiles
+  Scenario Outline: Compare two json files
+    Then In the system level, the json file <actual> equals the json file <expected>
+
+    Examples: 
+      | actual                 | expected                 |
+      | dataFiles\\sample2.json | dataFiles\\sample3.json |
+      | dataFiles\\sample3.json | dataFiles\\sample1.json |
