@@ -50,15 +50,6 @@ command line in your pipeline. Should work the same way in TeamCity, Azure etc.
 Structure may vary based on the project, number of pages, number of scenarios etc. Use the gherkin reference page in
 order to find out how to write smarter scenarios: https://cucumber.io/docs/gherkin/reference/
 
-### TODO:
-
-- create username and password grunt options.
-- setup more example configurations.
-- add functions for the following utilities: pdf, xml, json, xls reading and comparison.
-- add api testing support.
-- configure reports to display duration.
-- add mobile integration.
-
 ### Documentation:
 
 Protractor API: https://www.protractortest.org/#/api
