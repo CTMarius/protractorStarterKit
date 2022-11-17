@@ -1,6 +1,6 @@
 # Protractor Demo
 
-This is basic setup to get QA's to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
+This is basic setup to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
 
 ### Components:
 
