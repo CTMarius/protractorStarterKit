@@ -35,6 +35,7 @@ to using old-fashioned browser-waits.
 - Scenarios in the feature files.
 - Step definitions in the step definition files.
 - Page objects in the page objects files.
+- Page actions in the page actions files.
 
 ### Configuring the tests:
 
@@ -53,9 +54,7 @@ order to find out how to write smarter scenarios: https://cucumber.io/docs/gherk
 
 - create username and password grunt options.
 - setup more example configurations.
-- add a helper functions or utils layer and page actions to enable users to write cleaner step definitions.
 - add functions for the following utilities: pdf, xml, json, xls reading and comparison.
-- add multi browser support.
 - add api testing support.
 - configure reports to display duration.
 - add mobile integration.
