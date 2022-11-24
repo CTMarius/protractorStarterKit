@@ -2,6 +2,8 @@
 
 ### As of April 2023 Protractor will reach end of life and no support or updates will be offered. A separate branch is opened and dedicated to testing different alternatives to Protractor. I will create a separate repository once the alternative will be up and running.
 
+### Description:
+
 This is basic setup to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
 
 ### Components:
