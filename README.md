@@ -1,6 +1,6 @@
 # Protractor Demo
 
-### As of April 2023 Protractor will be deprecated and no support or updates will be offered. A separate branch is opened and dedicated to testing different alternatives to Protractor. Once the alternative will be up and running, I will create a separate repository.
+### As of April 2023 Protractor will reach end of life and no support or updates will be offered. A separate branch is opened and dedicated to testing different alternatives to Protractor. I will create a separate repository once the alternative will be up and running.
 
 This is basic setup to easily start writing automated UI tests for web applications and to integrate it into your pipeline.
 
@@ -55,7 +55,7 @@ order to find out how to write smarter scenarios: https://cucumber.io/docs/gherk
 
 ### Documentation:
 
-Protractor API: https://www.protractortest.org/#/api
+Protractor API: https://www.protractortest.org/
 
 Chai API: https://www.chaijs.com/api/
 
