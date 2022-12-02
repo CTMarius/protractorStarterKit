@@ -1,6 +1,6 @@
 # Protractor Demo
 
-### As of April 2023 Protractor will reach end of life and no support or updates will be offered. A separate branch is opened and dedicated to testing different alternatives to Protractor. I will create a separate repository once the alternative will be up and running.
+### As of April 2023 Protractor will reach end of life and no support or updates will be offered. This means this repo will also be deprecated. A separate branch is opened and dedicated to testing different alternatives. I will create a separate repository once the alternative will be up and running.
 
 ### Description:
 
