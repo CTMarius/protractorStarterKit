@@ -33,7 +33,7 @@ to using old-fashioned browser-waits.
 3. In the root folder of the project, open a command prompt with admin rights and run "npm install".
 4. Once step 3 is finished, run "npm i @types/node" followed by the "npm install grunt-cli -g" in the command prompt. You might need to restart your
    terminal after this is finished.
-5. Run "grunt e2e --baseUrl=https://keen-ardinghelli-99a36b30.netlify.app/" in the command line terminal in order to run the tests or use the
+5. Run "grunt e2e --baseUrl=<your url> in the command line terminal in order to run the tests or use the
    integrated grunt task runner your IDE.
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
