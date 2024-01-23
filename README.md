@@ -37,6 +37,8 @@ to using old-fashioned browser-waits.
    integrated grunt task runner your IDE.
 6. Reports will be generated in a temporary folder in the project root folder. Open the index.html to view them.
 
+   You can test this repo with the example tests againts a simple note taking app like this: grunt e2e --baseUrl=https://keen-ardinghelli-99a36b30.netlify.app/
+
 ### Writing tests:
 
 - Scenarios in the feature files.
