@@ -24,7 +24,7 @@ to using old-fashioned browser-waits.
 
 1. NodeJs: https://nodejs.org/en/download/
 
-2. An IDE of your choice
+2. Any IDE of your choice
 
 ### Getting started:
 
