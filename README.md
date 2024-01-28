@@ -41,11 +41,10 @@ to using old-fashioned browser-waits.
 
 ### Writing tests:
 
-- Scenarios in the feature files.
+- Scenarios and tests in the feature files.
 - Step definitions in the step definition files.
-- Page actions in the page actions files.
+- Page interactions in the page actions files.
 - Page objects in the page objects files.
-
 
 ### Configuring the tests:
 
