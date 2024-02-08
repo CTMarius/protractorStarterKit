@@ -1,4 +1,4 @@
-# Protractor Demo
+# Protractor Demo (deprecated)
 
 ### Disclaimer 
 
