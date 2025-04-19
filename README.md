@@ -3,7 +3,7 @@
 ### Disclaimer 
 
 As of April 2023 Protractor has reached end of life and no support or updates will be offered by the developers. 
-This means this repo is also deprecated, I will start working on a Playwright version of this as soon as possible. 
+This means this repo is also deprecated, I will start working on a Playwright version of this project is available on my profile. 
 
 ### Description:
 
